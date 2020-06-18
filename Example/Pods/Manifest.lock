@@ -1,0 +1,16 @@
+PODS:
+  - NFGuardDog (1.0.0)
+
+DEPENDENCIES:
+  - NFGuardDog (from `../`)
+
+EXTERNAL SOURCES:
+  NFGuardDog:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NFGuardDog: 7c6f08d69af66781b05275db7033947b7a84970f
+
+PODFILE CHECKSUM: 2d49257c8088e073b179fdb8e99f02dcfc9d67f3
+
+COCOAPODS: 1.9.3

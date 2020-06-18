@@ -1,0 +1,22 @@
+{
+  "name": "NFGuardDog",
+  "version": "1.0.0",
+  "summary": "APP的看门狗，主要功能有crash防护，crash收集，日志收集，FPS监控，流量监控",
+  "description": "APP的看门狗，主要功能有crash防护，crash收集，日志收集，FPS监控，流量监控",
+  "homepage": "https://github.com/JIANG PENGH CHENG/NFGuardDog",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "JIANG PENGH CHENG": "ninefivefly@foxmail.com"
+  },
+  "source": {
+    "git": "https://github.com/JIANG PENGH CHENG/NFGuardDog.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "NFGuardDog/Classes/**/*"
+}
