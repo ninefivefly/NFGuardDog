@@ -8,16 +8,13 @@
 
 #import "NSDictionary+NFGuardDog.h"
 #import "NSObject+NFMethodSwizzling.h"
-#import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 #import "NFCommonDefine.h"
 
 @implementation NSDictionary (NFGuardDog)
 
-+ (void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self nf_SwizzlingClassMethod:@selector(dictionaryWithObjects:forKeys:count:) withMethod:@selector(nf_avoid_crash_dictionaryWithObjects:forKeys:count:)];
-    });
++ (void)nf_swizzleMethods{
+    [self nf_SwizzlingClassMethod:@selector(dictionaryWithObjects:forKeys:count:) withMethod:@selector(nf_avoid_crash_dictionaryWithObjects:forKeys:count:)];
 }
 
 
@@ -26,7 +23,7 @@
          return [self nf_avoid_crash_dictionaryWithObjects:objects forKeys:keys count:cnt];
      }
      @catch (NSException *exception) {
-         [NFGuardDog notiErrorWithException:exception defaultToDo:NFAvoidCrashDefaultRemoveNil];
+         [[NFAvoidCrash shareInstance] notiErrorWithException:exception defaultToDo:NFAvoidCrashDefaultRemoveNil];
       
          NSUInteger index = 0;
          id  _Nonnull __unsafe_unretained newObjects[cnt];

@@ -8,22 +8,19 @@
 
 #import "NSMutableAttributedString+NFGuardDog.h"
 #import "NSObject+NFMethodSwizzling.h"
-#import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 #import "NFCommonDefine.h"
 
 @implementation NSMutableAttributedString (NFGuardDog)
 
-+ (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Class cls = NSClassFromString(@"NSConcreteMutableAttributedString");
-        
-        //initWithString:
-        [cls nf_SwizzlingInstanceMethod:@selector(initWithString:) withMethod:@selector(nf_avoid_crash_initWithString:)];
-        
-        //initWithString:attributes:
-        [cls nf_SwizzlingInstanceMethod:@selector(initWithString:attributes:) withMethod:@selector(nf_avoid_crash_initWithString:attributes:)];
-    });
++ (void)nf_swizzleMethods {
+    Class cls = NSClassFromString(@"NSConcreteMutableAttributedString");
+    
+    //initWithString:
+    [cls nf_SwizzlingInstanceMethod:@selector(initWithString:) withMethod:@selector(nf_avoid_crash_initWithString:)];
+    
+    //initWithString:attributes:
+    [cls nf_SwizzlingInstanceMethod:@selector(initWithString:attributes:) withMethod:@selector(nf_avoid_crash_initWithString:attributes:)];
 }
 
 - (instancetype)nf_avoid_crash_initWithString:(NSString *)str{

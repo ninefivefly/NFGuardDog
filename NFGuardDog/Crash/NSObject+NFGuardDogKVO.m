@@ -9,18 +9,15 @@
 #import "NSObject+NFGuardDogKVO.h"
 #import "NSObject+NFMethodSwizzling.h"
 #import "NFCommonDefine.h"
-#import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 
 @implementation NSObject (NFGuardDogKVO)
 
-+ (void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self nf_SwizzlingInstanceMethod:@selector(addObserver:forKeyPath:options:context:) withMethod:@selector(nf_avoid_crash_addObserver:forKeyPath:options:context:)];
-        [self nf_SwizzlingInstanceMethod:@selector(removeObserver:forKeyPath:context:) withMethod:@selector(nf_avoid_crash_removeObserver:forKeyPath:context:)];
-        [self nf_SwizzlingInstanceMethod:@selector(removeObserver:forKeyPath:) withMethod:@selector(nf_avoid_crash_removeObserver:forKeyPath:)];
-        [self nf_SwizzlingInstanceMethod:@selector(observeValueForKeyPath:ofObject:change:context:) withMethod:@selector(nf_avoid_crash_observeValueForKeyPath:ofObject:change:context:)];
-    });
++ (void)nf_swizzleMethodsKVO{
+    [self nf_SwizzlingInstanceMethod:@selector(addObserver:forKeyPath:options:context:) withMethod:@selector(nf_avoid_crash_addObserver:forKeyPath:options:context:)];
+    [self nf_SwizzlingInstanceMethod:@selector(removeObserver:forKeyPath:context:) withMethod:@selector(nf_avoid_crash_removeObserver:forKeyPath:context:)];
+    [self nf_SwizzlingInstanceMethod:@selector(removeObserver:forKeyPath:) withMethod:@selector(nf_avoid_crash_removeObserver:forKeyPath:)];
+    [self nf_SwizzlingInstanceMethod:@selector(observeValueForKeyPath:ofObject:change:context:) withMethod:@selector(nf_avoid_crash_observeValueForKeyPath:ofObject:change:context:)];
 }
 
 - (void)nf_avoid_crash_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context{

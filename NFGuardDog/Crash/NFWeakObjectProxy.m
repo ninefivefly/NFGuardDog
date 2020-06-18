@@ -10,10 +10,13 @@
 
 @implementation NFWeakObjectProxy
 
-+ (id)proxyForTarget:(id)target{
-    NFWeakObjectProxy* p = [NFWeakObjectProxy alloc];
-    p.target = target;
-    return p;
+- (instancetype)initWithTarget:(id)target {
+    _target = target;
+    return self;
+}
+
++ (instancetype)proxyWithTarget:(id)target {
+    return [[NFWeakObjectProxy alloc] initWithTarget:target];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel{

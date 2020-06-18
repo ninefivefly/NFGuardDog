@@ -8,19 +8,16 @@
 
 #import "NSString+NFGuadDog.h"
 #import "NSObject+NFMethodSwizzling.h"
-#import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 #import "NFCommonDefine.h"
 
 @implementation NSString (NFGuadDog)
 
-+ (void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Class __NSCFConstantString = NSClassFromString(@"__NSCFConstantString");
-        [self swizzlingInstanceMethodForCls:__NSCFConstantString];
-        Class __NSCFString = NSClassFromString(@"__NSCFString");
-        [self swizzlingInstanceMethodForCls:__NSCFString];
-    });
++ (void)nf_swizzleMethods{
+    Class __NSCFConstantString = NSClassFromString(@"__NSCFConstantString");
+    [self swizzlingInstanceMethodForCls:__NSCFConstantString];
+    Class __NSCFString = NSClassFromString(@"__NSCFString");
+    [self swizzlingInstanceMethodForCls:__NSCFString];
 }
 
 + (void)swizzlingInstanceMethodForCls:(Class)cls{
@@ -51,7 +48,7 @@
     @try {
         ret = [self nf_avoid_crash_characterAtIndex:index];
     } @catch (NSException *exception) {
-        [NFGuardDog notiErrorWithException:exception defaultToDo:NFAvoidCrashDefaultReturnZero];
+        [[NFAvoidCrash shareInstance] notiErrorWithException:exception defaultToDo:NFAvoidCrashDefaultReturnZero];
     } @finally {
         return ret;
     }

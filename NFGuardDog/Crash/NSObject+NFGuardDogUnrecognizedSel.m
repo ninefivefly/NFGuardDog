@@ -7,23 +7,20 @@
 //
 
 #import "NSObject+NFGuardDogUnrecognizedSel.h"
-#import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 #import "NFCommonDefine.h"
 #import "NSObject+NFMethodSwizzling.h"
 
 @implementation NSObject (NFGuardDogUnrecognizedSel)
 
-+ (void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        // instance method.
-        [self nf_SwizzlingInstanceMethod:@selector(methodSignatureForSelector:) withMethod:@selector(nf_avoid_crash_methodSignatureForSelector:)];
-        [self nf_SwizzlingInstanceMethod:@selector(forwardInvocation:) withMethod:@selector(nf_avoid_crash_forwardInvocation:)];
-        
-        // clase method.
-        [self nf_SwizzlingClassMethod:@selector(methodSignatureForSelector:) withMethod:@selector(nf_avoid_crash_methodSignatureForSelector:)];
-        [self nf_SwizzlingClassMethod:@selector(forwardInvocation:) withMethod:@selector(nf_avoid_crash_forwardInvocation:)];
-    });
++ (void)nf_swizzleMethods{
+    // instance method.
+    [self nf_SwizzlingInstanceMethod:@selector(methodSignatureForSelector:) withMethod:@selector(nf_avoid_crash_methodSignatureForSelector:)];
+    [self nf_SwizzlingInstanceMethod:@selector(forwardInvocation:) withMethod:@selector(nf_avoid_crash_forwardInvocation:)];
+    
+    // clase method.
+    [self nf_SwizzlingClassMethod:@selector(methodSignatureForSelector:) withMethod:@selector(nf_avoid_crash_methodSignatureForSelector:)];
+    [self nf_SwizzlingClassMethod:@selector(forwardInvocation:) withMethod:@selector(nf_avoid_crash_forwardInvocation:)];
 }
 
 - (NSMethodSignature *)nf_avoid_crash_methodSignatureForSelector:(SEL)aSelector{

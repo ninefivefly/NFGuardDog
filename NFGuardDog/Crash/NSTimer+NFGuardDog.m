@@ -12,12 +12,9 @@
 
 @implementation NSTimer (NFGuardDog)
 
-+ (void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self nf_SwizzlingClassMethod:@selector(timerWithTimeInterval:target:selector:userInfo:repeats:) withMethod:@selector(nf_avoid_crash_timerWithTimeInterval:target:selector:userInfo:repeats:)];
-        [self nf_SwizzlingClassMethod:@selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:) withMethod:@selector(nf_avoid_crash_scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:)];
-    });
++ (void)nf_swizzleMethods{
+    [self nf_SwizzlingClassMethod:@selector(timerWithTimeInterval:target:selector:userInfo:repeats:) withMethod:@selector(nf_avoid_crash_timerWithTimeInterval:target:selector:userInfo:repeats:)];
+    [self nf_SwizzlingClassMethod:@selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:) withMethod:@selector(nf_avoid_crash_scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:)];
 }
 
 + (NSTimer *)nf_avoid_crash_timerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo repeats:(BOOL)yesOrNo{

@@ -9,21 +9,18 @@
 #import "NSObject+NFGuardDogKVC.h"
 #import "NSObject+NFMethodSwizzling.h"
 #import "NFCommonDefine.h"
-#import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 
 @implementation NSObject (NFGuardDogKVC)
 
-+ (void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        // set methods
-        [self nf_SwizzlingInstanceMethod:@selector(setValue:forKey:) withMethod:@selector(nf_avoid_crash_setValue:forKey:)];
-        [self nf_SwizzlingInstanceMethod:@selector(setValue:forKeyPath:) withMethod:@selector(nf_avoid_crash_setValue:forKeyPath:)];
-        
-        // get methods
-        [self nf_SwizzlingInstanceMethod:@selector(valueForKey:) withMethod:@selector(nf_avoid_crash_valueForKey:)];
-        [self nf_SwizzlingInstanceMethod:@selector(valueForKeyPath:) withMethod:@selector(nf_avoid_crash_valueForKeyPath:)];
-    });
++ (void)nf_swizzleMethodsKVC{
+    // set methods
+    [self nf_SwizzlingInstanceMethod:@selector(setValue:forKey:) withMethod:@selector(nf_avoid_crash_setValue:forKey:)];
+    [self nf_SwizzlingInstanceMethod:@selector(setValue:forKeyPath:) withMethod:@selector(nf_avoid_crash_setValue:forKeyPath:)];
+    
+    // get methods
+    [self nf_SwizzlingInstanceMethod:@selector(valueForKey:) withMethod:@selector(nf_avoid_crash_valueForKey:)];
+    [self nf_SwizzlingInstanceMethod:@selector(valueForKeyPath:) withMethod:@selector(nf_avoid_crash_valueForKeyPath:)];
 }
 
 - (void)nf_avoid_crash_setValue:(id)value forKey:(NSString *)key{

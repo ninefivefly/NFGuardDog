@@ -12,14 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NFWeakObjectProxy : NSProxy
 
-//
-@property(nonatomic, weak)id target;
+@property (nonatomic, weak, readonly, nullable) id target;
 
 //
-+ (id)proxyForTarget:(id)target;
+- (nonnull instancetype)initWithTarget:(nonnull id)target;
+
+//
++ (nonnull instancetype)proxyWithTarget:(nonnull id)target;
 
 @end
 
-#define NFWeakObjectProxy(target) [NFWeakObjectProxy proxyForTarget:target]
+#define NFWeakObjectProxy(target) [NFWeakObjectProxy proxyWithTarget:target]
 
 NS_ASSUME_NONNULL_END

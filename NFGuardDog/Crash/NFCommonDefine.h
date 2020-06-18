@@ -9,31 +9,17 @@
 #ifndef NFCommonDefine_h
 #define NFCommonDefine_h
 
-#define NFAvoidCrashNotification      @"AvoidCrashNotification"
-#define NFAvoidCrashIsiOS(version)    ([[UIDevice currentDevice].systemVersion floatValue] >= version)
-
-
-//user can ignore below define
-#define NFAvoidCrashDefaultReturnNil  @"AvoidCrash default is to return nil to avoid crash."
-#define NFAvoidCrashDefaultIgnore     @"AvoidCrash default is to ignore this operation to avoid crash."
-#define NFAvoidCrashDefaultRemoveNil  @"AvoidCrash default is to remove nil object to avoid crash."
-#define NFAvoidCrashDefaultReturnZero @"AvoidCrash default is to return a without assign unichar."
-
-#define NFAvoidCrashSeparator         @"================================================================"
-#define NFAvoidCrashSeparatorWithFlag @"========================AvoidCrash Log=========================="
-
-#ifdef DEBUG
-#define NFAvoidCrashLog(...)          NSLog(@"%@",[NSString stringWithFormat:__VA_ARGS__])
-#else
-#define NFAvoidCrashLog(...)
-#endif
+#define NFAvoidCrashDefaultReturnNil  @"NFAvoidCrash default is to return nil to avoid crash."
+#define NFAvoidCrashDefaultIgnore     @"NFAvoidCrash default is to ignore this operation to avoid crash."
+#define NFAvoidCrashDefaultRemoveNil  @"NFAvoidCrash default is to remove nil object to avoid crash."
+#define NFAvoidCrashDefaultReturnZero @"NFAvoidCrash default is to return a without assign unichar."
 
 
 #define NFCatchExceptionWithIgonore(expr) \
     @try {\
         expr\
     } @catch (NSException *exception) {\
-        [NFGuardDog notiErrorWithException:exception defaultToDo:NFAvoidCrashDefaultIgnore];\
+        [[NFAvoidCrash shareInstance] notiErrorWithException:exception defaultToDo:NFAvoidCrashDefaultIgnore];\
     } @finally {\
     }
 
@@ -42,7 +28,7 @@
     @try {\
         ret = expr\
     } @catch (NSException *exception) {\
-        [NFGuardDog notiErrorWithException:exception defaultToDo:NFAvoidCrashDefaultReturnNil];\
+        [[NFAvoidCrash shareInstance] notiErrorWithException:exception defaultToDo:NFAvoidCrashDefaultReturnNil];\
     } @finally {\
         return ret;\
     }

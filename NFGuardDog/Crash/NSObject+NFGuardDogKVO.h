@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (NFGuardDogKVO)
 
++ (void)nf_swizzleMethodsKVO;
+
 @end
 
 NS_ASSUME_NONNULL_END

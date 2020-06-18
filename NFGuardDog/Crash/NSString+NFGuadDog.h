@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (NFGuadDog)
 
++ (void)nf_swizzleMethods;
+
 @end
 
 NS_ASSUME_NONNULL_END

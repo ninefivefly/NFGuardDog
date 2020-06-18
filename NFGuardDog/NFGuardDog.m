@@ -10,4 +10,8 @@
 
 @implementation NFGuardDog
 
++ (void)start{
+    
+}
+
 @end

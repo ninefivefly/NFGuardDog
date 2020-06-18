@@ -8,38 +8,35 @@
 
 #import "NSArray+NFGuardDog.h"
 #import "NSObject+NFMethodSwizzling.h"
-#import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 #import "NFCommonDefine.h"
 
 @implementation NSArray (NFGuardDog)
 
-+ (void)nf_swizzleNSArray{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self nf_SwizzlingClassMethod:@selector(arrayWithObjects:count:) withMethod:@selector(nf_avoid_crash_arrayWithObjects:count:)];
-        
-        //
-        Class __NSArray = NSClassFromString(@"NSArray");
-        Class __NSArrayI = NSClassFromString(@"__NSArrayI");
-        Class __NSSingleObjectArrayI = NSClassFromString(@"__NSSingleObjectArrayI");
-        Class __NSArray0 = NSClassFromString(@"__NSArray0");
++ (void)nf_swizzleMethods{
+    [self nf_SwizzlingClassMethod:@selector(arrayWithObjects:count:) withMethod:@selector(nf_avoid_crash_arrayWithObjects:count:)];
     
-        //objectsAtIndexes:
-        [__NSArray nf_SwizzlingInstanceMethod:@selector(objectsAtIndexes:) withMethod:@selector(nf_avoid_crash_objectsAtIndexes:)];
-        
-        //objectAtIndex:
-        [__NSArray0 nf_SwizzlingInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(nf_avoid_crash_array0ObjectAtIndex:)];
-        [__NSSingleObjectArrayI nf_SwizzlingInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(nf_avoid_crash_array1ObjectAtIndex:)];
-        [__NSArrayI nf_SwizzlingInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(nf_avoid_crash_arrayMObjectAtIndex:)];
+    //
+    Class __NSArray = NSClassFromString(@"NSArray");
+    Class __NSArrayI = NSClassFromString(@"__NSArrayI");
+    Class __NSSingleObjectArrayI = NSClassFromString(@"__NSSingleObjectArrayI");
+    Class __NSArray0 = NSClassFromString(@"__NSArray0");
     
-        //objectAtIndexedSubscript:
-        [__NSArrayI nf_SwizzlingInstanceMethod:@selector(objectAtIndexedSubscript:) withMethod:@selector(nf_avoid_crash_objectAtIndexedSubscript:)];
-           
-        //getObjects:range:
-        [__NSArray0 nf_SwizzlingInstanceMethod:@selector(getObjects:range:) withMethod:@selector(nf_avoid_crash_array0getObjects:range:)];
-        [__NSSingleObjectArrayI nf_SwizzlingInstanceMethod:@selector(getObjects:range:) withMethod:@selector(nf_avoid_crash_array1getObjects:range:)];
-        [__NSArrayI nf_SwizzlingInstanceMethod:@selector(getObjects:range:) withMethod:@selector(nf_avoid_crash_arrayMgetObjects:range:)];
-    });
+    //objectsAtIndexes:
+    [__NSArray nf_SwizzlingInstanceMethod:@selector(objectsAtIndexes:) withMethod:@selector(nf_avoid_crash_objectsAtIndexes:)];
+    
+    //objectAtIndex:
+    [__NSArray0 nf_SwizzlingInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(nf_avoid_crash_array0ObjectAtIndex:)];
+    [__NSSingleObjectArrayI nf_SwizzlingInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(nf_avoid_crash_array1ObjectAtIndex:)];
+    [__NSArrayI nf_SwizzlingInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(nf_avoid_crash_arrayMObjectAtIndex:)];
+    
+    //objectAtIndexedSubscript:
+    [__NSArrayI nf_SwizzlingInstanceMethod:@selector(objectAtIndexedSubscript:) withMethod:@selector(nf_avoid_crash_objectAtIndexedSubscript:)];
+    
+    //getObjects:range:
+    [__NSArray0 nf_SwizzlingInstanceMethod:@selector(getObjects:range:) withMethod:@selector(nf_avoid_crash_array0getObjects:range:)];
+    [__NSSingleObjectArrayI nf_SwizzlingInstanceMethod:@selector(getObjects:range:) withMethod:@selector(nf_avoid_crash_array1getObjects:range:)];
+    [__NSArrayI nf_SwizzlingInstanceMethod:@selector(getObjects:range:) withMethod:@selector(nf_avoid_crash_arrayMgetObjects:range:)];
 }
 
 // __NSArray objectsAtIndexes:
@@ -48,7 +45,7 @@
         return [self nf_avoid_crash_arrayWithObjects:objects count:cnt];
     } @catch (NSException *exception) {
         //
-        [NFGuardDog notiErrorWithException:exception defaultToDo:NFAvoidCrashDefaultRemoveNil];
+        [[NFAvoidCrash shareInstance] notiErrorWithException:exception defaultToDo:NFAvoidCrashDefaultRemoveNil];
     
         //
         NSInteger newObjsIndex = 0;

@@ -6,36 +6,33 @@
 //  Copyright © 2020 JIANG PENG CHENG. All rights reserved.
 //
 
-#import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 #import "NFCommonDefine.h"
 #import "NSMutableArray+NFGuardDog.h"
 #import "NSObject+NFMethodSwizzling.h"
 
 @implementation NSMutableArray (NFGuardDog)
 
-+ (void)nf_swizzleNSMutableArray{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Class __NSArrayM = NSClassFromString(@"__NSArrayM");
-        
-        //objectAtIndex:
-        [__NSArrayM nf_SwizzlingInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(nf_avoid_crash_ObjectAtIndex:)];
-        
-        //objectAtIndexedSubscript
-        [__NSArrayM nf_SwizzlingInstanceMethod:@selector(objectAtIndexedSubscript:) withMethod:@selector(nf_avoid_crash_objectAtIndexedSubscript:)];
-        
-        //setObject:atIndexedSubscript:
-        [__NSArrayM nf_SwizzlingInstanceMethod:@selector(setObject:atIndexedSubscript:) withMethod:@selector(nf_avoid_crash_setObject:atIndexedSubscript:)];
-        
-        //removeObjectAtIndex:
-        [__NSArrayM nf_SwizzlingInstanceMethod:@selector(removeObjectAtIndex:) withMethod:@selector(nf_avoid_crash_removeObjectAtIndex:)];
-        
-        //insertObject:atIndex:
-        [__NSArrayM nf_SwizzlingInstanceMethod:@selector(insertObject:atIndex:) withMethod:@selector(nf_avoid_crash_insertObject:atIndex:)];
-        
-        //getObjects:range:
-        [__NSArrayM nf_SwizzlingInstanceMethod:@selector(getObjects:range:) withMethod:@selector(nf_avoid_crash_getObjects:range:)];
-    });
++ (void)nf_swizzleMethods{
+    Class __NSArrayM = NSClassFromString(@"__NSArrayM");
+    
+    //objectAtIndex:
+    [__NSArrayM nf_SwizzlingInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(nf_avoid_crash_ObjectAtIndex:)];
+    
+    //objectAtIndexedSubscript
+    [__NSArrayM nf_SwizzlingInstanceMethod:@selector(objectAtIndexedSubscript:) withMethod:@selector(nf_avoid_crash_objectAtIndexedSubscript:)];
+    
+    //setObject:atIndexedSubscript:
+    [__NSArrayM nf_SwizzlingInstanceMethod:@selector(setObject:atIndexedSubscript:) withMethod:@selector(nf_avoid_crash_setObject:atIndexedSubscript:)];
+    
+    //removeObjectAtIndex:
+    [__NSArrayM nf_SwizzlingInstanceMethod:@selector(removeObjectAtIndex:) withMethod:@selector(nf_avoid_crash_removeObjectAtIndex:)];
+    
+    //insertObject:atIndex:
+    [__NSArrayM nf_SwizzlingInstanceMethod:@selector(insertObject:atIndex:) withMethod:@selector(nf_avoid_crash_insertObject:atIndex:)];
+    
+    //getObjects:range:
+    [__NSArrayM nf_SwizzlingInstanceMethod:@selector(getObjects:range:) withMethod:@selector(nf_avoid_crash_getObjects:range:)];
 }
 
 // __NSArrayM objectAtIndex:

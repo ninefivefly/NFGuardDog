@@ -8,25 +8,22 @@
 
 #import "NSAttributedString+NFGuardDog.h"
 #import "NSObject+NFMethodSwizzling.h"
-#import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 #import "NFCommonDefine.h"
 
 @implementation NSAttributedString (NFGuardDog)
 
-+ (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Class cls = NSClassFromString(@"NSConcreteAttributedString");
-        
-        //initWithString:
-        [cls nf_SwizzlingInstanceMethod:@selector(initWithString:) withMethod:@selector(nf_avoid_crash_initWithString:)];
-        
-        //initWithAttributedString
-        [cls nf_SwizzlingInstanceMethod:@selector(initWithAttributedString:) withMethod:@selector(nf_avoid_crash_initWithAttributedString:)];
-        
-        //initWithString:attributes:
-        [cls nf_SwizzlingInstanceMethod:@selector(initWithString:attributes:) withMethod:@selector(nf_avoid_crash_initWithString:attributes:)];
-    });
++ (void)nf_swizzleMethods {
+    Class cls = NSClassFromString(@"NSConcreteAttributedString");
+    
+    //initWithString:
+    [cls nf_SwizzlingInstanceMethod:@selector(initWithString:) withMethod:@selector(nf_avoid_crash_initWithString:)];
+    
+    //initWithAttributedString
+    [cls nf_SwizzlingInstanceMethod:@selector(initWithAttributedString:) withMethod:@selector(nf_avoid_crash_initWithAttributedString:)];
+    
+    //initWithString:attributes:
+    [cls nf_SwizzlingInstanceMethod:@selector(initWithString:attributes:) withMethod:@selector(nf_avoid_crash_initWithString:attributes:)];
 }
 
 - (instancetype)nf_avoid_crash_initWithString:(NSString *)str{

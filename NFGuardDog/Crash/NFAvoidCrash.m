@@ -6,6 +6,17 @@
 //  Copyright © 2020 JIANG PENG CHENG. All rights reserved.
 
 #import "NFAvoidCrash.h"
+#import "NSArray+NFGuardDog.h"
+#import "NSMutableArray+NFGuardDog.h"
+#import "NSDictionary+NFGuardDog.h"
+#import "NSMutableDictionary+NFGuardDog.h"
+
+
+@interface NFAvoidCrash()
+
+@property(nonatomic)BOOL isCatchExceptionOn;
+
+@end
 
 @implementation NFAvoidCrash
 
@@ -18,93 +29,40 @@
     return instance;
 }
 
-+ (void)notiErrorWithException:(NSException *)exception defaultToDo:(nonnull NSString *)dto {
-    NSArray *callStackSymbolsArr = [NSThread callStackSymbols];
-    NSString *mainCallStackSymbolMsg = [self getMainCallStackSymbolMessageWithCallStackSymbols:callStackSymbolsArr];
-    if (mainCallStackSymbolMsg == nil) {
-        mainCallStackSymbolMsg = @"崩溃方法定位失败,请您查看函数调用栈来排查错误原因";
-    }
-    
-    NSString *errorName = exception.name;
-    NSString *errorReason = exception.reason;
-    //errorReason 可能为 -[__NSCFConstantString avoidCrashCharacterAtIndex:]: Range or index out of bounds
-    //将avoidCrash去掉
-    errorReason = [errorReason stringByReplacingOccurrencesOfString:@"nf_avoid_crash_" withString:@""];
-    
-    NSString *errorPlace = [NSString stringWithFormat:@"Error Place:%@",mainCallStackSymbolMsg];
-    
-    NSString *logErrorMessage = [NSString stringWithFormat:@"\n\n%@\n\n%@\n%@\n%@\n%@",NFAvoidCrashSeparatorWithFlag, errorName, errorReason, errorPlace, dto];
-    
-    logErrorMessage = [NSString stringWithFormat:@"%@\n\n%@\n\n",logErrorMessage, NFAvoidCrashSeparator];
-    NFAvoidCrashLog(@"%@",logErrorMessage);
-    
-    
-    //请忽略下面的赋值，目的只是为了能顺利上传到cocoapods
-    logErrorMessage = logErrorMessage;
-    
-//    NSDictionary *errorInfoDic = @{
-//                                   key_errorName        : errorName,
-//                                   key_errorReason      : errorReason,
-//                                   key_errorPlace       : errorPlace,
-//                                   key_defaultToDo      : defaultToDo,
-//                                   key_exception        : exception,
-//                                   key_callStackSymbols : callStackSymbolsArr
-//                                   };
-//
-//    //将错误信息放在字典里，用通知的形式发送出去
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [[NSNotificationCenter defaultCenter] postNotificationName:AvoidCrashNotification object:nil userInfo:errorInfoDic];
-//    });
+- (void)startCatchException:(NFCrashExceptionType)type{
+    self.catchExceptionType = type;
+    self.isCatchExceptionOn = YES;
 }
 
-/**
- *  获取堆栈主要崩溃精简化的信息<根据正则表达式匹配出来>
- *
- *  @param callStackSymbols 堆栈主要崩溃信息
- *
- *  @return 堆栈主要崩溃精简化的信息
- */
+- (void)stopCatchException{
+    self.isCatchExceptionOn = NO;
+}
 
-+ (NSString *)getMainCallStackSymbolMessageWithCallStackSymbols:(NSArray<NSString *> *)callStackSymbols {
+- (void)notiErrorWithException:(NSException *)exception defaultToDo:(nonnull NSString *)dto {
+    NFCrashException* exc = [NFCrashException exceptionWithNSException:exception dto:dto];
+    [exc printBrief];
     
-    //mainCallStackSymbolMsg的格式为   +[类名 方法名]  或者 -[类名 方法名]
-    __block NSString *mainCallStackSymbolMsg = nil;
-    
-    //匹配出来的格式为 +[类名 方法名]  或者 -[类名 方法名]
-    NSString *regularExpStr = @"[-\\+]\\[.+\\]";
-    
-    
-    NSRegularExpression *regularExp = [[NSRegularExpression alloc] initWithPattern:regularExpStr options:NSRegularExpressionCaseInsensitive error:nil];
-    
-    
-    for (int index = 2; index < callStackSymbols.count; index++) {
-        NSString *callStackSymbol = callStackSymbols[index];
-        
-        [regularExp enumerateMatchesInString:callStackSymbol options:NSMatchingReportProgress range:NSMakeRange(0, callStackSymbol.length) usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop) {
-            if (result) {
-                NSString* tempCallStackSymbolMsg = [callStackSymbol substringWithRange:result.range];
-                
-                //get className
-                NSString *className = [tempCallStackSymbolMsg componentsSeparatedByString:@" "].firstObject;
-                className = [className componentsSeparatedByString:@"["].lastObject;
-                
-                NSBundle *bundle = [NSBundle bundleForClass:NSClassFromString(className)];
-                
-                //filter category and system class
-                if (![className hasSuffix:@")"] && bundle == [NSBundle mainBundle]) {
-                    mainCallStackSymbolMsg = tempCallStackSymbolMsg;
-                    
-                }
-                *stop = YES;
-            }
-        }];
-        
-        if (mainCallStackSymbolMsg.length) {
-            break;
-        }
+    //
+    if (self.handleCrashException) {
+        self.handleCrashException(exc);
+    }
+}
+
+- (void)setIsCatchExceptionOn:(BOOL)isCatchExceptionOn{
+    if (_isCatchExceptionOn == isCatchExceptionOn) {
+        return;
     }
     
-    return mainCallStackSymbolMsg;
+    if (self.catchExceptionType & NFCrashExceptionTypeContainer) {
+        [NSArray performSelector:@selector(nf_swizzleMethods)];
+        [NSMutableArray performSelector:@selector(nf_swizzleMethods)];
+        [NSDictionary performSelector:@selector(nf_swizzleMethods)];
+        [NSMutableDictionary performSelector:@selector(nf_swizzleMethods)];
+    }
+    
+    if (self.catchExceptionType & NFCrashExceptionTypeUnrecognizedSelector) {
+        [NSObject performSelector:@selector(nf_swizzleMethods)];
+    }
 }
 
 @end

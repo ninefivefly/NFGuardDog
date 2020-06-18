@@ -8,25 +8,22 @@
 
 #import "NSMutableString+NFGuardDog.h"
 #import "NSObject+NFMethodSwizzling.h"
-#import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 #import "NFCommonDefine.h"
 
 @implementation NSMutableString (NFGuardDog)
 
-+ (void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Class __NSCFString = NSClassFromString(@"__NSCFString");
-        
-        //replaceCharactersInRange
-        [__NSCFString nf_SwizzlingInstanceMethod:@selector(replaceCharactersInRange:withString:) withMethod:@selector(nf_avoid_crash_replaceCharactersInRange:withString:)];
-        
-        //insertString:atIndex:
-        [__NSCFString nf_SwizzlingInstanceMethod:@selector(insertString:atIndex:) withMethod:@selector(nf_avoid_crash_insertString:atIndex:)];
-        
-        //deleteCharactersInRange
-        [__NSCFString nf_SwizzlingInstanceMethod:@selector(deleteCharactersInRange:) withMethod:@selector(nf_avoid_crash_deleteCharactersInRange:)];
-    });
++ (void)nf_swizzleMethods{
+    Class __NSCFString = NSClassFromString(@"__NSCFString");
+    
+    //replaceCharactersInRange
+    [__NSCFString nf_SwizzlingInstanceMethod:@selector(replaceCharactersInRange:withString:) withMethod:@selector(nf_avoid_crash_replaceCharactersInRange:withString:)];
+    
+    //insertString:atIndex:
+    [__NSCFString nf_SwizzlingInstanceMethod:@selector(insertString:atIndex:) withMethod:@selector(nf_avoid_crash_insertString:atIndex:)];
+    
+    //deleteCharactersInRange
+    [__NSCFString nf_SwizzlingInstanceMethod:@selector(deleteCharactersInRange:) withMethod:@selector(nf_avoid_crash_deleteCharactersInRange:)];
 }
 
 - (void)nf_avoid_crash_replaceCharactersInRange:(NSRange)range withString:(NSString *)aString{
