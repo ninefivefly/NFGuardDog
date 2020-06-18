@@ -7,46 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02DD2B54FCC890D141F925DC2583B5EC /* NSObject+NFGuardDogUnrecognizedSel.h in Headers */ = {isa = PBXBuildFile; fileRef = 26809A185FC8A4A3EA13F1A7050B8A5A /* NSObject+NFGuardDogUnrecognizedSel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E2553830504BF8C32E74D7AF1570B82 /* NSMutableString+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 260BEBF6E88F7400F602F575C3F705DF /* NSMutableString+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E631EAEDEADCCEE94056087E9B9C34E /* Pods-NFGuardDog_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2429042A7BE9AC8C469FEEDD19722840 /* Pods-NFGuardDog_Example-dummy.m */; };
-		141C247E9D1461D1DE30F09D179AC1D1 /* NSDictionary+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 37743C3059936BB04153D4E7C30E918E /* NSDictionary+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		193890604249B2FB0267DF03CE82659D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		211287EE8B819FC80D9D12EC52CDDC77 /* NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = E09858295F9FF97899B18A7DA6D09BDE /* NFGuardDog.m */; };
-		2F68B01675B3E910831952337B8FB5C2 /* NSDictionary+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = E9924BCB4C71C2895B9DAB74A9BC1B54 /* NSDictionary+NFGuardDog.m */; };
-		381AD5146737EAE430C74DD3519ED4CA /* NSObject+NFGuardDogKVC.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0AC72650CE110938FBC6949D07C900 /* NSObject+NFGuardDogKVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3933E4E9AB20960FE1AD1C1425A1E9D4 /* NSMutableAttributedString+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2379A117FD0788501F8DD1C5CA035E50 /* NSMutableAttributedString+NFGuardDog.m */; };
-		3AC89D7035CFBA4C46698475CF3BEC83 /* NFCommonDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 77E345FDF77E7C75876ED69EFC1FCC77 /* NFCommonDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D83CC3DC8C24BA4C41C09F7B569CF03 /* NSAttributedString+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = C53284CB158AE53074359B55FDB74129 /* NSAttributedString+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10D67944B4BBC2D7E27F32A364C8B215 /* NSObject+NFMethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FDFADF947802244D0110E1D9C3E104 /* NSObject+NFMethodSwizzling.m */; };
+		22E38C252A7DB4602A082BC634CD7DF5 /* NFWeakObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD10ECAEBDAE80630930A09648F8CB4 /* NFWeakObjectProxy.m */; };
+		2395DD5FD97DE2B1D65065F953DD8122 /* NSAttributedString+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AFB1BAD926CFF29E9D0528785F250C /* NSAttributedString+NFGuardDog.m */; };
+		24FD74AAA33253FB0D7D32577D3A473F /* NSObject+NFGuardDogUnrecognizedSel.h in Headers */ = {isa = PBXBuildFile; fileRef = A2E3CCD5647D2F3BC5F4322F34C06900 /* NSObject+NFGuardDogUnrecognizedSel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FDB0C12E0A227C54C75282FD10D80CD /* NSMutableString+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = B66AA88AC3559BBE5659F189D30992A9 /* NSMutableString+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37BBB9EAC734B11020BBE9B3E4E4EFCF /* NFAvoidCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 16ECC1ED211462F542F264A218B5123A /* NFAvoidCrash.m */; };
 		41179B8E5C981DCE851F5165EEA18713 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		41B300D89D73F49EBFA5D5DF45645320 /* NSObject+NFGuardDogKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD42E4CC163256C11BA39882F7178B9 /* NSObject+NFGuardDogKVO.m */; };
-		4298DB448F154358851057DB5E660223 /* NSObject+NFGuardDogKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = 70DB174570593B5C670DE9F0C14A0374 /* NSObject+NFGuardDogKVO.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55E785A1A65F1A06BF86F0A27006CAB2 /* NSMutableString+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B8CB640FE9D604B1C7933C43D018C5 /* NSMutableString+NFGuardDog.m */; };
-		57D43C2FF416A4339C47762A2D0E7802 /* NSMutableArray+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 92BC45AB629A81E29C3930B87A8DC5C9 /* NSMutableArray+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5CA59E0D7ED637C6706575347C97C748 /* NSMutableDictionary+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A94CF9BC672BE38EE307C06B543CC /* NSMutableDictionary+NFGuardDog.m */; };
-		7BA8F755A228AF3170A51F649CFB2805 /* NFWeakObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D24AF74805643D972BEC4BEFAE5296E /* NFWeakObjectProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8125FF06359EA9315675ABED0CD56AF4 /* NSMutableArray+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1548AC8C41D43B8CA90EB7C5ED8DA344 /* NSMutableArray+NFGuardDog.m */; };
-		829AA95CC9C2A61BE7DCCB2FC980D3F2 /* NFGuardDog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C02A6C07678F5A31A41A688132D46E7F /* NFGuardDog-dummy.m */; };
-		86FAFC2C14E6D5D4A20982884932F8E3 /* NSString+NFGuadDog.h in Headers */ = {isa = PBXBuildFile; fileRef = E41F258E0A99B74F8C89708E259CA9AB /* NSString+NFGuadDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EE6D9B8293DAAA6527B74D53316A77B /* NSObject+NFMethodSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DD68DEEFC0BB279AEB7AF86D2E3BD71 /* NSObject+NFMethodSwizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		901BBAE9B5C2A49397E0BCCDB2C72391 /* NSArray+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DD25887786D3AD2B394EDB9AF7C949 /* NSArray+NFGuardDog.m */; };
-		960C9EA4936B366DCB3AD7F268ED2047 /* NSObject+NFMethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = B69664326630A4ADFAC9E36141BD2DA6 /* NSObject+NFMethodSwizzling.m */; };
-		9D71BA0B2F594CFF69E42D38386EBC92 /* NSArray+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 69DF1C15379325F6900B663A41AE6A08 /* NSArray+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5CFC542B8AD01A1BE2F8DEA613C00AD /* NSTimer+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 250F78E6B0B01DB45166BD71D00C6B75 /* NSTimer+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B11972468193EDBA4A852C4D0C174CF7 /* NSMutableDictionary+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = F138304247011A667FB9E2696FCF5BF9 /* NSMutableDictionary+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1E0A2D2395DBDF123659CC952E63200 /* NSTimer+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = EA35FA9B6150B32F53B81F7718893CCC /* NSTimer+NFGuardDog.m */; };
-		B97E549922F96128D2D21D8ECE3D56EC /* NSObject+NFGuardDogUnrecognizedSel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2390AF2B1674227D0C955ED475C6CEE /* NSObject+NFGuardDogUnrecognizedSel.m */; };
-		BFB3638C8F504F694B000CB1E4901E35 /* NFWeakObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A746AEAF5997AD1290E4362D7B4732D /* NFWeakObjectProxy.m */; };
-		C5D3806F8C5BD9DD90260F1EA16BB0D9 /* NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E84D8B1BD73DC635D3872CF67A264D /* NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		428C9F162379D6C71AC7267476AF4A58 /* NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 621827607BB6CFDB1FDD8E6F9BE18CF2 /* NFGuardDog.m */; };
+		4CF9AC6070A6280D13C53E1248BC9E3B /* NSAttributedString+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AEF1C0794DC0DEF77DFD1BBB9800D26 /* NSAttributedString+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50CC09511BF0AC6AEBE20A09C2C424D4 /* NSMutableArray+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = AC62E4B93F93168EF8F024D0207B821E /* NSMutableArray+NFGuardDog.m */; };
+		519F76408133E7043F596FC2D3F60AAE /* NSMutableAttributedString+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 767B58D7EDF400C38CC8B03800A90A78 /* NSMutableAttributedString+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55248DFC14FDB3D4B313AEB4DFC6C5CB /* NSTimer+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB0508C8037E1DCF1797EF164E13A12 /* NSTimer+NFGuardDog.m */; };
+		55F238AC16B6475E9F85A2461C58906D /* NFWeakObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = FBF18F5085A164C9BC32FDB602BC5786 /* NFWeakObjectProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BE0B69DC95914406AED0D85262DC39C /* NSObject+NFGuardDogKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBAE201E099991D3BE02C57BD7A780 /* NSObject+NFGuardDogKVO.m */; };
+		5C6A9B9DB51E413D76CFD4340B1B13B9 /* NSObject+NFGuardDogKVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D2EE7A5E6E93DEDFD39D4F0E6FF4F2F /* NSObject+NFGuardDogKVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CBA6E3E418A9FF2B6EA037BF6EF31C7 /* NSDictionary+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA836D233581D5BDEB4FE2C56C5BDC4 /* NSDictionary+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6025780EB36464CC25DCD3E105867ABB /* NSMutableString+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E5BFBADF7E27476DA3974D7A4E65E7 /* NSMutableString+NFGuardDog.m */; };
+		6AC52A5D7E14D8B8348F4098128ACED3 /* NFAvoidCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = 9159D785F1EFD142EB1FDB94A4870CE0 /* NFAvoidCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		772E875788B68948F55710CE58995F2F /* NSMutableDictionary+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = FF709A1141641F98109DC99DD1E38425 /* NSMutableDictionary+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77C62BE2505BD270C1E42A8BC32F300F /* NSArray+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 04691F77E55700AA71D400A649D2A1A4 /* NSArray+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A7FB1C9FD923DE75E4FD2E4849E92DF /* NSTimer+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = EBB58E4C58973DEA118F7C6D90A1A153 /* NSTimer+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F1D67694DFD8AD9CF937AAC87AF6F1E /* NSObject+NFGuardDogUnrecognizedSel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0905717597E901B0E0DD0E698A98B22 /* NSObject+NFGuardDogUnrecognizedSel.m */; };
+		86476ACD5E6075F8BBB21B6062177AE0 /* NSString+NFGuadDog.h in Headers */ = {isa = PBXBuildFile; fileRef = E51DE525934A7B2CA3AC895FB48F6F01 /* NSString+NFGuadDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89A2A950D8C44D6650C5E39C6290F13A /* NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 27761D2B7B1A162DB368F77EA78455A6 /* NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C1757022258F29145EA05289FD1D569 /* NSMutableAttributedString+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC79DCCDEE091DEDE0A68EDAF7D72E3 /* NSMutableAttributedString+NFGuardDog.m */; };
+		9188CC74D90114559C6CB6CE3541CAF9 /* NSDictionary+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A6D340CAF9DB032BF914FC2B5DB575 /* NSDictionary+NFGuardDog.m */; };
+		9841D1BDCBB97E5920BDB4D3E48BBECE /* NSObject+NFMethodSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DF1D6C54463349EE9EC9988F8E4E1DA /* NSObject+NFMethodSwizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F7291B447726605F4C89E6830AA543C /* NSArray+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = E62B32A688651DB7801505385CFE045C /* NSArray+NFGuardDog.m */; };
+		A8922C8D8B6AF61F58806BE86E8E1E3D /* NSMutableArray+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D0B11CD97F3CEF62F270992447E7F5F /* NSMutableArray+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF26CE90B9E2BB9880BA0D11BD3018A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B05290C190D232930F11E75F1B85BFB0 /* NFGuardDog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 874E563CB8AF1F3BF94C3B119106C036 /* NFGuardDog-dummy.m */; };
+		B3BE3D1FA01246B050A6B1105788D73A /* NSObject+NFGuardDogKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDD3C560B004847DE505C1BE3C77A09 /* NSObject+NFGuardDogKVC.m */; };
 		C84AF557DD5A77A26347D90D59B54E23 /* Pods-NFGuardDog_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD4E2F7BCA8482FA4066345A92CBCED /* Pods-NFGuardDog_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA2D129EC1265F19397950F33AD94DD9 /* NSObject+NFGuardDogKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F3959ABB19B2EBDD52E8F87A9D48AB5A /* NSObject+NFGuardDogKVC.m */; };
+		C9F3B530F430D2C592288B2A4DD09CB2 /* NSMutableDictionary+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B9627A6CFB6E3A5294CF4EEE713B81 /* NSMutableDictionary+NFGuardDog.m */; };
+		D1C09F2BF6B02A78FF081FC3D1647D1A /* NFCommonDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = DC70992087F5D861587E30CB07CF03D4 /* NFCommonDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E396714582B8658E82E7E78F930AB0B2 /* Pods-NFGuardDog_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A81BBF37A6B7EC5452D2CFD59B50349F /* Pods-NFGuardDog_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5CB0DCA0BED947E05186EA1A349E8AA /* NSObject+NFGuardDogKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = C596FECD4381C124F4C7AD0C345CEA4A /* NSObject+NFGuardDogKVO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F05AE3EAD06AF6C45E0EC73646D27424 /* NSString+NFGuadDog.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCBEC1692BE9150CB551A39FF44B40 /* NSString+NFGuadDog.m */; };
 		F0FCC3DEEEF2957D5FE470E0C3B4D850 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		F2BF4103D2DEEC4A16A1016902D6EADC /* Pods-NFGuardDog_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F385EE3D2037DD3A253E32AC5F54C3 /* Pods-NFGuardDog_Tests-dummy.m */; };
-		F728BF6B8CBC194B2D1A9583426681D7 /* NSAttributedString+NFGuardDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E98992B243A126C96A483560EE8E13 /* NSAttributedString+NFGuardDog.m */; };
-		F9603D402B391B1DFE8546ECF014F684 /* NFGuardDog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58947E5A78B879A73C7E4A916C9B7FF5 /* NFGuardDog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE2E8F1C583EA2B8DB9CC0E874D5E493 /* NSMutableAttributedString+NFGuardDog.h in Headers */ = {isa = PBXBuildFile; fileRef = 54CED5E3EBAFA60152E7377ADEE2B74D /* NSMutableAttributedString+NFGuardDog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFEE7FC2FF4FD80BC049904B8EFA9E19 /* NSString+NFGuadDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CCD55FF03F85C267B51C9D6C5528EC /* NSString+NFGuadDog.m */; };
+		F4F3A586155570C5B653227099E13DB4 /* NFGuardDog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 700102D857310C3509042861E8A4D371 /* NFGuardDog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,85 +69,87 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04691F77E55700AA71D400A649D2A1A4 /* NSArray+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+NFGuardDog.h"; path = "NFGuardDog/Crash/NSArray+NFGuardDog.h"; sourceTree = "<group>"; };
 		05B8A11FE0AEB85944BE04FE1C765B0F /* Pods-NFGuardDog_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NFGuardDog_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		08E98992B243A126C96A483560EE8E13 /* NSAttributedString+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+NFGuardDog.m"; path = "NFGuardDog/Classes/NSAttributedString+NFGuardDog.m"; sourceTree = "<group>"; };
+		08E5BFBADF7E27476DA3974D7A4E65E7 /* NSMutableString+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableString+NFGuardDog.m"; path = "NFGuardDog/Crash/NSMutableString+NFGuardDog.m"; sourceTree = "<group>"; };
 		0C33278E3E05904CA04D4D8572BB4348 /* Pods-NFGuardDog_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NFGuardDog_Tests.modulemap"; sourceTree = "<group>"; };
-		0D24AF74805643D972BEC4BEFAE5296E /* NFWeakObjectProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NFWeakObjectProxy.h; path = NFGuardDog/Classes/NFWeakObjectProxy.h; sourceTree = "<group>"; };
-		1548AC8C41D43B8CA90EB7C5ED8DA344 /* NSMutableArray+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+NFGuardDog.m"; path = "NFGuardDog/Classes/NSMutableArray+NFGuardDog.m"; sourceTree = "<group>"; };
+		0D2EE7A5E6E93DEDFD39D4F0E6FF4F2F /* NSObject+NFGuardDogKVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+NFGuardDogKVC.h"; path = "NFGuardDog/Crash/NSObject+NFGuardDogKVC.h"; sourceTree = "<group>"; };
+		16ECC1ED211462F542F264A218B5123A /* NFAvoidCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NFAvoidCrash.m; path = NFGuardDog/Crash/NFAvoidCrash.m; sourceTree = "<group>"; };
+		1CB0508C8037E1DCF1797EF164E13A12 /* NSTimer+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+NFGuardDog.m"; path = "NFGuardDog/Crash/NSTimer+NFGuardDog.m"; sourceTree = "<group>"; };
 		20B095639E90924EE4E545DD3FAAF1DE /* Pods-NFGuardDog_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFGuardDog_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		2379A117FD0788501F8DD1C5CA035E50 /* NSMutableAttributedString+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+NFGuardDog.m"; path = "NFGuardDog/Classes/NSMutableAttributedString+NFGuardDog.m"; sourceTree = "<group>"; };
 		2429042A7BE9AC8C469FEEDD19722840 /* Pods-NFGuardDog_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFGuardDog_Example-dummy.m"; sourceTree = "<group>"; };
-		250F78E6B0B01DB45166BD71D00C6B75 /* NSTimer+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+NFGuardDog.h"; path = "NFGuardDog/Classes/NSTimer+NFGuardDog.h"; sourceTree = "<group>"; };
-		260BEBF6E88F7400F602F575C3F705DF /* NSMutableString+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableString+NFGuardDog.h"; path = "NFGuardDog/Classes/NSMutableString+NFGuardDog.h"; sourceTree = "<group>"; };
-		26809A185FC8A4A3EA13F1A7050B8A5A /* NSObject+NFGuardDogUnrecognizedSel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+NFGuardDogUnrecognizedSel.h"; path = "NFGuardDog/Classes/NSObject+NFGuardDogUnrecognizedSel.h"; sourceTree = "<group>"; };
+		27761D2B7B1A162DB368F77EA78455A6 /* NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NFGuardDog.h; path = NFGuardDog/NFGuardDog.h; sourceTree = "<group>"; };
+		279A233B8978C0EBCAD922402AF94983 /* NFGuardDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NFGuardDog.release.xcconfig; sourceTree = "<group>"; };
 		29313D714DFD3EE1A154C0FF2ECA5CC1 /* Pods-NFGuardDog_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFGuardDog_Example-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		32A6D340CAF9DB032BF914FC2B5DB575 /* NSDictionary+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+NFGuardDog.m"; path = "NFGuardDog/Crash/NSDictionary+NFGuardDog.m"; sourceTree = "<group>"; };
 		32E524F50503D679E9B669DA254A7ED6 /* Pods-NFGuardDog_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFGuardDog_Example.release.xcconfig"; sourceTree = "<group>"; };
-		37743C3059936BB04153D4E7C30E918E /* NSDictionary+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+NFGuardDog.h"; path = "NFGuardDog/Classes/NSDictionary+NFGuardDog.h"; sourceTree = "<group>"; };
-		399B1C785036402AF3F48C22CBDE1733 /* NFGuardDog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NFGuardDog.modulemap; sourceTree = "<group>"; };
-		3A746AEAF5997AD1290E4362D7B4732D /* NFWeakObjectProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NFWeakObjectProxy.m; path = NFGuardDog/Classes/NFWeakObjectProxy.m; sourceTree = "<group>"; };
+		36D264D3EECF109E09992DA6B4BD6956 /* NFGuardDog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NFGuardDog.modulemap; sourceTree = "<group>"; };
 		3EB5A1799462740FA01354C2E5CAC162 /* Pods-NFGuardDog_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFGuardDog_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		48B800F6804623A59A243B7B5DE8D70B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		4A7CF8A4807472895EE7D1A36F96FE59 /* Pods-NFGuardDog_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NFGuardDog_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4DED403DD80FDDD573A8DF1C8E10391C /* Pods-NFGuardDog_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFGuardDog_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		54CED5E3EBAFA60152E7377ADEE2B74D /* NSMutableAttributedString+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+NFGuardDog.h"; path = "NFGuardDog/Classes/NSMutableAttributedString+NFGuardDog.h"; sourceTree = "<group>"; };
-		58947E5A78B879A73C7E4A916C9B7FF5 /* NFGuardDog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NFGuardDog-umbrella.h"; sourceTree = "<group>"; };
-		59E84D8B1BD73DC635D3872CF67A264D /* NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NFGuardDog.h; path = NFGuardDog/Classes/NFGuardDog.h; sourceTree = "<group>"; };
-		64DD25887786D3AD2B394EDB9AF7C949 /* NSArray+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+NFGuardDog.m"; path = "NFGuardDog/Classes/NSArray+NFGuardDog.m"; sourceTree = "<group>"; };
+		5CDD3C560B004847DE505C1BE3C77A09 /* NSObject+NFGuardDogKVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NFGuardDogKVC.m"; path = "NFGuardDog/Crash/NSObject+NFGuardDogKVC.m"; sourceTree = "<group>"; };
+		621827607BB6CFDB1FDD8E6F9BE18CF2 /* NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NFGuardDog.m; path = NFGuardDog/NFGuardDog.m; sourceTree = "<group>"; };
+		64AFB1BAD926CFF29E9D0528785F250C /* NSAttributedString+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+NFGuardDog.m"; path = "NFGuardDog/Crash/NSAttributedString+NFGuardDog.m"; sourceTree = "<group>"; };
 		695B06717639E3FE8DDE5DC205260D30 /* NFGuardDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NFGuardDog.framework; path = NFGuardDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		69DF1C15379325F6900B663A41AE6A08 /* NSArray+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+NFGuardDog.h"; path = "NFGuardDog/Classes/NSArray+NFGuardDog.h"; sourceTree = "<group>"; };
 		6AA2E73E14FD5486B27DF8E6856D0B8A /* Pods_NFGuardDog_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NFGuardDog_Tests.framework; path = "Pods-NFGuardDog_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DD68DEEFC0BB279AEB7AF86D2E3BD71 /* NSObject+NFMethodSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+NFMethodSwizzling.h"; path = "NFGuardDog/Classes/NSObject+NFMethodSwizzling.h"; sourceTree = "<group>"; };
-		70DB174570593B5C670DE9F0C14A0374 /* NSObject+NFGuardDogKVO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+NFGuardDogKVO.h"; path = "NFGuardDog/Classes/NSObject+NFGuardDogKVO.h"; sourceTree = "<group>"; };
-		77E345FDF77E7C75876ED69EFC1FCC77 /* NFCommonDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NFCommonDefine.h; path = NFGuardDog/Classes/NFCommonDefine.h; sourceTree = "<group>"; };
-		7D3A94CF9BC672BE38EE307C06B543CC /* NSMutableDictionary+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+NFGuardDog.m"; path = "NFGuardDog/Classes/NSMutableDictionary+NFGuardDog.m"; sourceTree = "<group>"; };
-		87C61208478D6039BD117829BD6E2655 /* NFGuardDog.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = NFGuardDog.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		92BC45AB629A81E29C3930B87A8DC5C9 /* NSMutableArray+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+NFGuardDog.h"; path = "NFGuardDog/Classes/NSMutableArray+NFGuardDog.h"; sourceTree = "<group>"; };
-		99CCD55FF03F85C267B51C9D6C5528EC /* NSString+NFGuadDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+NFGuadDog.m"; path = "NFGuardDog/Classes/NSString+NFGuadDog.m"; sourceTree = "<group>"; };
+		700102D857310C3509042861E8A4D371 /* NFGuardDog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NFGuardDog-umbrella.h"; sourceTree = "<group>"; };
+		767B58D7EDF400C38CC8B03800A90A78 /* NSMutableAttributedString+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+NFGuardDog.h"; path = "NFGuardDog/Crash/NSMutableAttributedString+NFGuardDog.h"; sourceTree = "<group>"; };
+		7AC79DCCDEE091DEDE0A68EDAF7D72E3 /* NSMutableAttributedString+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+NFGuardDog.m"; path = "NFGuardDog/Crash/NSMutableAttributedString+NFGuardDog.m"; sourceTree = "<group>"; };
+		7AEF1C0794DC0DEF77DFD1BBB9800D26 /* NSAttributedString+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+NFGuardDog.h"; path = "NFGuardDog/Crash/NSAttributedString+NFGuardDog.h"; sourceTree = "<group>"; };
+		7D0B11CD97F3CEF62F270992447E7F5F /* NSMutableArray+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+NFGuardDog.h"; path = "NFGuardDog/Crash/NSMutableArray+NFGuardDog.h"; sourceTree = "<group>"; };
+		7F4973F337955203F3079E719B3F2779 /* NFGuardDog-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NFGuardDog-Info.plist"; sourceTree = "<group>"; };
+		874E563CB8AF1F3BF94C3B119106C036 /* NFGuardDog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NFGuardDog-dummy.m"; sourceTree = "<group>"; };
+		8ACBAE201E099991D3BE02C57BD7A780 /* NSObject+NFGuardDogKVO.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NFGuardDogKVO.m"; path = "NFGuardDog/Crash/NSObject+NFGuardDogKVO.m"; sourceTree = "<group>"; };
+		8DF1D6C54463349EE9EC9988F8E4E1DA /* NSObject+NFMethodSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+NFMethodSwizzling.h"; path = "NFGuardDog/Crash/NSObject+NFMethodSwizzling.h"; sourceTree = "<group>"; };
+		9159D785F1EFD142EB1FDB94A4870CE0 /* NFAvoidCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NFAvoidCrash.h; path = NFGuardDog/Crash/NFAvoidCrash.h; sourceTree = "<group>"; };
+		91C8163FF5F3B812339A4BDED37D7EBA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9AA836D233581D5BDEB4FE2C56C5BDC4 /* NSDictionary+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+NFGuardDog.h"; path = "NFGuardDog/Crash/NSDictionary+NFGuardDog.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F934E894694F3AFDC2B063570618300 /* Pods_NFGuardDog_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NFGuardDog_Example.framework; path = "Pods-NFGuardDog_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0905717597E901B0E0DD0E698A98B22 /* NSObject+NFGuardDogUnrecognizedSel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NFGuardDogUnrecognizedSel.m"; path = "NFGuardDog/Crash/NSObject+NFGuardDogUnrecognizedSel.m"; sourceTree = "<group>"; };
+		A2E3CCD5647D2F3BC5F4322F34C06900 /* NSObject+NFGuardDogUnrecognizedSel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+NFGuardDogUnrecognizedSel.h"; path = "NFGuardDog/Crash/NSObject+NFGuardDogUnrecognizedSel.h"; sourceTree = "<group>"; };
 		A81BBF37A6B7EC5452D2CFD59B50349F /* Pods-NFGuardDog_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NFGuardDog_Example-umbrella.h"; sourceTree = "<group>"; };
 		ABE964057A408FAAF04366F9DC698B23 /* Pods-NFGuardDog_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFGuardDog_Example-frameworks.sh"; sourceTree = "<group>"; };
-		ACD42E4CC163256C11BA39882F7178B9 /* NSObject+NFGuardDogKVO.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NFGuardDogKVO.m"; path = "NFGuardDog/Classes/NSObject+NFGuardDogKVO.m"; sourceTree = "<group>"; };
-		B1255FB452B840F4BFC08D8500C6E2AB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		B69664326630A4ADFAC9E36141BD2DA6 /* NSObject+NFMethodSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NFMethodSwizzling.m"; path = "NFGuardDog/Classes/NSObject+NFMethodSwizzling.m"; sourceTree = "<group>"; };
+		ABF5259B8DB12357903AC34F4E83D78E /* NFGuardDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NFGuardDog.debug.xcconfig; sourceTree = "<group>"; };
+		AC62E4B93F93168EF8F024D0207B821E /* NSMutableArray+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+NFGuardDog.m"; path = "NFGuardDog/Crash/NSMutableArray+NFGuardDog.m"; sourceTree = "<group>"; };
+		B4FDFADF947802244D0110E1D9C3E104 /* NSObject+NFMethodSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NFMethodSwizzling.m"; path = "NFGuardDog/Crash/NSObject+NFMethodSwizzling.m"; sourceTree = "<group>"; };
+		B5B9627A6CFB6E3A5294CF4EEE713B81 /* NSMutableDictionary+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+NFGuardDog.m"; path = "NFGuardDog/Crash/NSMutableDictionary+NFGuardDog.m"; sourceTree = "<group>"; };
+		B66AA88AC3559BBE5659F189D30992A9 /* NSMutableString+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableString+NFGuardDog.h"; path = "NFGuardDog/Crash/NSMutableString+NFGuardDog.h"; sourceTree = "<group>"; };
 		B82E8EACA3D0FA314666D6A1C4E12E9F /* Pods-NFGuardDog_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFGuardDog_Tests-Info.plist"; sourceTree = "<group>"; };
 		B9607FD5792A1272EF2D101893DA2427 /* Pods-NFGuardDog_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NFGuardDog_Example.modulemap"; sourceTree = "<group>"; };
+		BAD10ECAEBDAE80630930A09648F8CB4 /* NFWeakObjectProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NFWeakObjectProxy.m; path = NFGuardDog/Crash/NFWeakObjectProxy.m; sourceTree = "<group>"; };
 		BFBC71EA44644347D01D00125A60AF1D /* Pods-NFGuardDog_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFGuardDog_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C02A6C07678F5A31A41A688132D46E7F /* NFGuardDog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NFGuardDog-dummy.m"; sourceTree = "<group>"; };
-		C31DF2DCDA3A2E91BA13B53AC8240123 /* NFGuardDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NFGuardDog.release.xcconfig; sourceTree = "<group>"; };
-		C53284CB158AE53074359B55FDB74129 /* NSAttributedString+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+NFGuardDog.h"; path = "NFGuardDog/Classes/NSAttributedString+NFGuardDog.h"; sourceTree = "<group>"; };
-		C5BF2D668985E022C75493602B801CEC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C57D846BEF219C196D3632428A7A70C3 /* NFGuardDog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NFGuardDog-prefix.pch"; sourceTree = "<group>"; };
+		C596FECD4381C124F4C7AD0C345CEA4A /* NSObject+NFGuardDogKVO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+NFGuardDogKVO.h"; path = "NFGuardDog/Crash/NSObject+NFGuardDogKVO.h"; sourceTree = "<group>"; };
 		C6F385EE3D2037DD3A253E32AC5F54C3 /* Pods-NFGuardDog_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFGuardDog_Tests-dummy.m"; sourceTree = "<group>"; };
-		D4A50BE465DD9F99737872E91E0DA88F /* NFGuardDog-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NFGuardDog-Info.plist"; sourceTree = "<group>"; };
-		E09858295F9FF97899B18A7DA6D09BDE /* NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NFGuardDog.m; path = NFGuardDog/Classes/NFGuardDog.m; sourceTree = "<group>"; };
-		E2390AF2B1674227D0C955ED475C6CEE /* NSObject+NFGuardDogUnrecognizedSel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NFGuardDogUnrecognizedSel.m"; path = "NFGuardDog/Classes/NSObject+NFGuardDogUnrecognizedSel.m"; sourceTree = "<group>"; };
-		E41F258E0A99B74F8C89708E259CA9AB /* NSString+NFGuadDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+NFGuadDog.h"; path = "NFGuardDog/Classes/NSString+NFGuadDog.h"; sourceTree = "<group>"; };
-		E5B8CB640FE9D604B1C7933C43D018C5 /* NSMutableString+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableString+NFGuardDog.m"; path = "NFGuardDog/Classes/NSMutableString+NFGuardDog.m"; sourceTree = "<group>"; };
-		E9924BCB4C71C2895B9DAB74A9BC1B54 /* NSDictionary+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+NFGuardDog.m"; path = "NFGuardDog/Classes/NSDictionary+NFGuardDog.m"; sourceTree = "<group>"; };
-		EA35FA9B6150B32F53B81F7718893CCC /* NSTimer+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+NFGuardDog.m"; path = "NFGuardDog/Classes/NSTimer+NFGuardDog.m"; sourceTree = "<group>"; };
+		CABCBEC1692BE9150CB551A39FF44B40 /* NSString+NFGuadDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+NFGuadDog.m"; path = "NFGuardDog/Crash/NSString+NFGuadDog.m"; sourceTree = "<group>"; };
+		DC70992087F5D861587E30CB07CF03D4 /* NFCommonDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NFCommonDefine.h; path = NFGuardDog/Crash/NFCommonDefine.h; sourceTree = "<group>"; };
+		E51DE525934A7B2CA3AC895FB48F6F01 /* NSString+NFGuadDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+NFGuadDog.h"; path = "NFGuardDog/Crash/NSString+NFGuadDog.h"; sourceTree = "<group>"; };
+		E62B32A688651DB7801505385CFE045C /* NSArray+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+NFGuardDog.m"; path = "NFGuardDog/Crash/NSArray+NFGuardDog.m"; sourceTree = "<group>"; };
 		EAD4E2F7BCA8482FA4066345A92CBCED /* Pods-NFGuardDog_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NFGuardDog_Tests-umbrella.h"; sourceTree = "<group>"; };
 		EAF5269BD068B4A34102E87EFE796359 /* Pods-NFGuardDog_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFGuardDog_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		EB0AC72650CE110938FBC6949D07C900 /* NSObject+NFGuardDogKVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+NFGuardDogKVC.h"; path = "NFGuardDog/Classes/NSObject+NFGuardDogKVC.h"; sourceTree = "<group>"; };
-		EDAFCEE5C0E78239A2AF4E7F8FF4AD5E /* NFGuardDog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NFGuardDog-prefix.pch"; sourceTree = "<group>"; };
-		F138304247011A667FB9E2696FCF5BF9 /* NSMutableDictionary+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+NFGuardDog.h"; path = "NFGuardDog/Classes/NSMutableDictionary+NFGuardDog.h"; sourceTree = "<group>"; };
-		F3959ABB19B2EBDD52E8F87A9D48AB5A /* NSObject+NFGuardDogKVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NFGuardDogKVC.m"; path = "NFGuardDog/Classes/NSObject+NFGuardDogKVC.m"; sourceTree = "<group>"; };
-		F7AA712A0CB637A12AF0CAB98038ECBD /* NFGuardDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NFGuardDog.debug.xcconfig; sourceTree = "<group>"; };
+		EBB58E4C58973DEA118F7C6D90A1A153 /* NSTimer+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+NFGuardDog.h"; path = "NFGuardDog/Crash/NSTimer+NFGuardDog.h"; sourceTree = "<group>"; };
+		ECBB2A02C5418C2B08836B8954614F37 /* NFGuardDog.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = NFGuardDog.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FBF18F5085A164C9BC32FDB602BC5786 /* NFWeakObjectProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NFWeakObjectProxy.h; path = NFGuardDog/Crash/NFWeakObjectProxy.h; sourceTree = "<group>"; };
+		FF709A1141641F98109DC99DD1E38425 /* NSMutableDictionary+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+NFGuardDog.h"; path = "NFGuardDog/Crash/NSMutableDictionary+NFGuardDog.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C0CD577A65C07578DA37CD719C7B095 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				193890604249B2FB0267DF03CE82659D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		23ED28C99EBBF73620E6734094B8A0F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F0FCC3DEEEF2957D5FE470E0C3B4D850 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D7A37231C49D760F8F9F1E48E3A3091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF26CE90B9E2BB9880BA0D11BD3018A9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,21 +164,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09E61E65E53E56C7B190F2B2DB096621 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				399B1C785036402AF3F48C22CBDE1733 /* NFGuardDog.modulemap */,
-				C02A6C07678F5A31A41A688132D46E7F /* NFGuardDog-dummy.m */,
-				D4A50BE465DD9F99737872E91E0DA88F /* NFGuardDog-Info.plist */,
-				EDAFCEE5C0E78239A2AF4E7F8FF4AD5E /* NFGuardDog-prefix.pch */,
-				58947E5A78B879A73C7E4A916C9B7FF5 /* NFGuardDog-umbrella.h */,
-				F7AA712A0CB637A12AF0CAB98038ECBD /* NFGuardDog.debug.xcconfig */,
-				C31DF2DCDA3A2E91BA13B53AC8240123 /* NFGuardDog.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/NFGuardDog";
-			sourceTree = "<group>";
-		};
 		13BFA0E7F207F254DF35F3D0312E6464 /* Pods-NFGuardDog_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,14 +181,19 @@
 			path = "Target Support Files/Pods-NFGuardDog_Example";
 			sourceTree = "<group>";
 		};
-		15125200021121FD76DC98B1B129C22C /* Pod */ = {
+		18187CA50C76A772D64E6FA6824BA868 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B1255FB452B840F4BFC08D8500C6E2AB /* LICENSE */,
-				87C61208478D6039BD117829BD6E2655 /* NFGuardDog.podspec */,
-				C5BF2D668985E022C75493602B801CEC /* README.md */,
+				36D264D3EECF109E09992DA6B4BD6956 /* NFGuardDog.modulemap */,
+				874E563CB8AF1F3BF94C3B119106C036 /* NFGuardDog-dummy.m */,
+				7F4973F337955203F3079E719B3F2779 /* NFGuardDog-Info.plist */,
+				C57D846BEF219C196D3632428A7A70C3 /* NFGuardDog-prefix.pch */,
+				700102D857310C3509042861E8A4D371 /* NFGuardDog-umbrella.h */,
+				ABF5259B8DB12357903AC34F4E83D78E /* NFGuardDog.debug.xcconfig */,
+				279A233B8978C0EBCAD922402AF94983 /* NFGuardDog.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/NFGuardDog";
 			sourceTree = "<group>";
 		};
 		35E338E2D7F466EE445A77162B51725D /* Pods-NFGuardDog_Tests */ = {
@@ -218,6 +212,19 @@
 			path = "Target Support Files/Pods-NFGuardDog_Tests";
 			sourceTree = "<group>";
 		};
+		501D38DD7C2424B0D19A1DBC1B1A64A3 /* NFGuardDog */ = {
+			isa = PBXGroup;
+			children = (
+				27761D2B7B1A162DB368F77EA78455A6 /* NFGuardDog.h */,
+				621827607BB6CFDB1FDD8E6F9BE18CF2 /* NFGuardDog.m */,
+				9D283527ABAD6CB696DC136477A3DDB0 /* Crash */,
+				900B44F770362A1B76EC32F7BB9CD406 /* Pod */,
+				18187CA50C76A772D64E6FA6824BA868 /* Support Files */,
+			);
+			name = NFGuardDog;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		8F9F9DBC4FFF5A38671A9EC1700A6167 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,53 +235,60 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A29C41D2DBFBECC22E8232AB7DB8D711 /* Development Pods */ = {
+		900B44F770362A1B76EC32F7BB9CD406 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7C9B8B07B87A43C150C1868F6F22C /* NFGuardDog */,
+				48B800F6804623A59A243B7B5DE8D70B /* LICENSE */,
+				ECBB2A02C5418C2B08836B8954614F37 /* NFGuardDog.podspec */,
+				91C8163FF5F3B812339A4BDED37D7EBA /* README.md */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		B6D7C9B8B07B87A43C150C1868F6F22C /* NFGuardDog */ = {
+		9D283527ABAD6CB696DC136477A3DDB0 /* Crash */ = {
 			isa = PBXGroup;
 			children = (
-				77E345FDF77E7C75876ED69EFC1FCC77 /* NFCommonDefine.h */,
-				59E84D8B1BD73DC635D3872CF67A264D /* NFGuardDog.h */,
-				E09858295F9FF97899B18A7DA6D09BDE /* NFGuardDog.m */,
-				0D24AF74805643D972BEC4BEFAE5296E /* NFWeakObjectProxy.h */,
-				3A746AEAF5997AD1290E4362D7B4732D /* NFWeakObjectProxy.m */,
-				69DF1C15379325F6900B663A41AE6A08 /* NSArray+NFGuardDog.h */,
-				64DD25887786D3AD2B394EDB9AF7C949 /* NSArray+NFGuardDog.m */,
-				C53284CB158AE53074359B55FDB74129 /* NSAttributedString+NFGuardDog.h */,
-				08E98992B243A126C96A483560EE8E13 /* NSAttributedString+NFGuardDog.m */,
-				37743C3059936BB04153D4E7C30E918E /* NSDictionary+NFGuardDog.h */,
-				E9924BCB4C71C2895B9DAB74A9BC1B54 /* NSDictionary+NFGuardDog.m */,
-				92BC45AB629A81E29C3930B87A8DC5C9 /* NSMutableArray+NFGuardDog.h */,
-				1548AC8C41D43B8CA90EB7C5ED8DA344 /* NSMutableArray+NFGuardDog.m */,
-				54CED5E3EBAFA60152E7377ADEE2B74D /* NSMutableAttributedString+NFGuardDog.h */,
-				2379A117FD0788501F8DD1C5CA035E50 /* NSMutableAttributedString+NFGuardDog.m */,
-				F138304247011A667FB9E2696FCF5BF9 /* NSMutableDictionary+NFGuardDog.h */,
-				7D3A94CF9BC672BE38EE307C06B543CC /* NSMutableDictionary+NFGuardDog.m */,
-				260BEBF6E88F7400F602F575C3F705DF /* NSMutableString+NFGuardDog.h */,
-				E5B8CB640FE9D604B1C7933C43D018C5 /* NSMutableString+NFGuardDog.m */,
-				EB0AC72650CE110938FBC6949D07C900 /* NSObject+NFGuardDogKVC.h */,
-				F3959ABB19B2EBDD52E8F87A9D48AB5A /* NSObject+NFGuardDogKVC.m */,
-				70DB174570593B5C670DE9F0C14A0374 /* NSObject+NFGuardDogKVO.h */,
-				ACD42E4CC163256C11BA39882F7178B9 /* NSObject+NFGuardDogKVO.m */,
-				26809A185FC8A4A3EA13F1A7050B8A5A /* NSObject+NFGuardDogUnrecognizedSel.h */,
-				E2390AF2B1674227D0C955ED475C6CEE /* NSObject+NFGuardDogUnrecognizedSel.m */,
-				6DD68DEEFC0BB279AEB7AF86D2E3BD71 /* NSObject+NFMethodSwizzling.h */,
-				B69664326630A4ADFAC9E36141BD2DA6 /* NSObject+NFMethodSwizzling.m */,
-				E41F258E0A99B74F8C89708E259CA9AB /* NSString+NFGuadDog.h */,
-				99CCD55FF03F85C267B51C9D6C5528EC /* NSString+NFGuadDog.m */,
-				250F78E6B0B01DB45166BD71D00C6B75 /* NSTimer+NFGuardDog.h */,
-				EA35FA9B6150B32F53B81F7718893CCC /* NSTimer+NFGuardDog.m */,
-				15125200021121FD76DC98B1B129C22C /* Pod */,
-				09E61E65E53E56C7B190F2B2DB096621 /* Support Files */,
+				9159D785F1EFD142EB1FDB94A4870CE0 /* NFAvoidCrash.h */,
+				16ECC1ED211462F542F264A218B5123A /* NFAvoidCrash.m */,
+				DC70992087F5D861587E30CB07CF03D4 /* NFCommonDefine.h */,
+				FBF18F5085A164C9BC32FDB602BC5786 /* NFWeakObjectProxy.h */,
+				BAD10ECAEBDAE80630930A09648F8CB4 /* NFWeakObjectProxy.m */,
+				04691F77E55700AA71D400A649D2A1A4 /* NSArray+NFGuardDog.h */,
+				E62B32A688651DB7801505385CFE045C /* NSArray+NFGuardDog.m */,
+				7AEF1C0794DC0DEF77DFD1BBB9800D26 /* NSAttributedString+NFGuardDog.h */,
+				64AFB1BAD926CFF29E9D0528785F250C /* NSAttributedString+NFGuardDog.m */,
+				9AA836D233581D5BDEB4FE2C56C5BDC4 /* NSDictionary+NFGuardDog.h */,
+				32A6D340CAF9DB032BF914FC2B5DB575 /* NSDictionary+NFGuardDog.m */,
+				7D0B11CD97F3CEF62F270992447E7F5F /* NSMutableArray+NFGuardDog.h */,
+				AC62E4B93F93168EF8F024D0207B821E /* NSMutableArray+NFGuardDog.m */,
+				767B58D7EDF400C38CC8B03800A90A78 /* NSMutableAttributedString+NFGuardDog.h */,
+				7AC79DCCDEE091DEDE0A68EDAF7D72E3 /* NSMutableAttributedString+NFGuardDog.m */,
+				FF709A1141641F98109DC99DD1E38425 /* NSMutableDictionary+NFGuardDog.h */,
+				B5B9627A6CFB6E3A5294CF4EEE713B81 /* NSMutableDictionary+NFGuardDog.m */,
+				B66AA88AC3559BBE5659F189D30992A9 /* NSMutableString+NFGuardDog.h */,
+				08E5BFBADF7E27476DA3974D7A4E65E7 /* NSMutableString+NFGuardDog.m */,
+				0D2EE7A5E6E93DEDFD39D4F0E6FF4F2F /* NSObject+NFGuardDogKVC.h */,
+				5CDD3C560B004847DE505C1BE3C77A09 /* NSObject+NFGuardDogKVC.m */,
+				C596FECD4381C124F4C7AD0C345CEA4A /* NSObject+NFGuardDogKVO.h */,
+				8ACBAE201E099991D3BE02C57BD7A780 /* NSObject+NFGuardDogKVO.m */,
+				A2E3CCD5647D2F3BC5F4322F34C06900 /* NSObject+NFGuardDogUnrecognizedSel.h */,
+				A0905717597E901B0E0DD0E698A98B22 /* NSObject+NFGuardDogUnrecognizedSel.m */,
+				8DF1D6C54463349EE9EC9988F8E4E1DA /* NSObject+NFMethodSwizzling.h */,
+				B4FDFADF947802244D0110E1D9C3E104 /* NSObject+NFMethodSwizzling.m */,
+				E51DE525934A7B2CA3AC895FB48F6F01 /* NSString+NFGuadDog.h */,
+				CABCBEC1692BE9150CB551A39FF44B40 /* NSString+NFGuadDog.m */,
+				EBB58E4C58973DEA118F7C6D90A1A153 /* NSTimer+NFGuardDog.h */,
+				1CB0508C8037E1DCF1797EF164E13A12 /* NSTimer+NFGuardDog.m */,
 			);
-			name = NFGuardDog;
-			path = ../..;
+			name = Crash;
+			sourceTree = "<group>";
+		};
+		A926C86AF906C2EA1F00AA8549B6E9D6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				501D38DD7C2424B0D19A1DBC1B1A64A3 /* NFGuardDog */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -289,7 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				A29C41D2DBFBECC22E8232AB7DB8D711 /* Development Pods */,
+				A926C86AF906C2EA1F00AA8549B6E9D6 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				8F9F9DBC4FFF5A38671A9EC1700A6167 /* Products */,
 				E92636869B8539C78081A9D12AF1BE99 /* Targets Support Files */,
@@ -332,27 +346,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E14DDA4D1D97258426E2A7798A9EB85A /* Headers */ = {
+		502902C965AA98BC6AA7290087E9B0DA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC89D7035CFBA4C46698475CF3BEC83 /* NFCommonDefine.h in Headers */,
-				F9603D402B391B1DFE8546ECF014F684 /* NFGuardDog-umbrella.h in Headers */,
-				C5D3806F8C5BD9DD90260F1EA16BB0D9 /* NFGuardDog.h in Headers */,
-				7BA8F755A228AF3170A51F649CFB2805 /* NFWeakObjectProxy.h in Headers */,
-				9D71BA0B2F594CFF69E42D38386EBC92 /* NSArray+NFGuardDog.h in Headers */,
-				3D83CC3DC8C24BA4C41C09F7B569CF03 /* NSAttributedString+NFGuardDog.h in Headers */,
-				141C247E9D1461D1DE30F09D179AC1D1 /* NSDictionary+NFGuardDog.h in Headers */,
-				57D43C2FF416A4339C47762A2D0E7802 /* NSMutableArray+NFGuardDog.h in Headers */,
-				FE2E8F1C583EA2B8DB9CC0E874D5E493 /* NSMutableAttributedString+NFGuardDog.h in Headers */,
-				B11972468193EDBA4A852C4D0C174CF7 /* NSMutableDictionary+NFGuardDog.h in Headers */,
-				0E2553830504BF8C32E74D7AF1570B82 /* NSMutableString+NFGuardDog.h in Headers */,
-				381AD5146737EAE430C74DD3519ED4CA /* NSObject+NFGuardDogKVC.h in Headers */,
-				4298DB448F154358851057DB5E660223 /* NSObject+NFGuardDogKVO.h in Headers */,
-				02DD2B54FCC890D141F925DC2583B5EC /* NSObject+NFGuardDogUnrecognizedSel.h in Headers */,
-				8EE6D9B8293DAAA6527B74D53316A77B /* NSObject+NFMethodSwizzling.h in Headers */,
-				86FAFC2C14E6D5D4A20982884932F8E3 /* NSString+NFGuadDog.h in Headers */,
-				A5CFC542B8AD01A1BE2F8DEA613C00AD /* NSTimer+NFGuardDog.h in Headers */,
+				6AC52A5D7E14D8B8348F4098128ACED3 /* NFAvoidCrash.h in Headers */,
+				D1C09F2BF6B02A78FF081FC3D1647D1A /* NFCommonDefine.h in Headers */,
+				F4F3A586155570C5B653227099E13DB4 /* NFGuardDog-umbrella.h in Headers */,
+				89A2A950D8C44D6650C5E39C6290F13A /* NFGuardDog.h in Headers */,
+				55F238AC16B6475E9F85A2461C58906D /* NFWeakObjectProxy.h in Headers */,
+				77C62BE2505BD270C1E42A8BC32F300F /* NSArray+NFGuardDog.h in Headers */,
+				4CF9AC6070A6280D13C53E1248BC9E3B /* NSAttributedString+NFGuardDog.h in Headers */,
+				5CBA6E3E418A9FF2B6EA037BF6EF31C7 /* NSDictionary+NFGuardDog.h in Headers */,
+				A8922C8D8B6AF61F58806BE86E8E1E3D /* NSMutableArray+NFGuardDog.h in Headers */,
+				519F76408133E7043F596FC2D3F60AAE /* NSMutableAttributedString+NFGuardDog.h in Headers */,
+				772E875788B68948F55710CE58995F2F /* NSMutableDictionary+NFGuardDog.h in Headers */,
+				2FDB0C12E0A227C54C75282FD10D80CD /* NSMutableString+NFGuardDog.h in Headers */,
+				5C6A9B9DB51E413D76CFD4340B1B13B9 /* NSObject+NFGuardDogKVC.h in Headers */,
+				E5CB0DCA0BED947E05186EA1A349E8AA /* NSObject+NFGuardDogKVO.h in Headers */,
+				24FD74AAA33253FB0D7D32577D3A473F /* NSObject+NFGuardDogUnrecognizedSel.h in Headers */,
+				9841D1BDCBB97E5920BDB4D3E48BBECE /* NSObject+NFMethodSwizzling.h in Headers */,
+				86476ACD5E6075F8BBB21B6062177AE0 /* NSString+NFGuadDog.h in Headers */,
+				7A7FB1C9FD923DE75E4FD2E4849E92DF /* NSTimer+NFGuardDog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,12 +376,12 @@
 /* Begin PBXNativeTarget section */
 		273BB5CC5240050A7AB98B11975558E0 /* NFGuardDog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED145A941418A1FD2C1F57A1BE4DE3B3 /* Build configuration list for PBXNativeTarget "NFGuardDog" */;
+			buildConfigurationList = 15169FE5CB967C088C7E9D4DF8DDCA91 /* Build configuration list for PBXNativeTarget "NFGuardDog" */;
 			buildPhases = (
-				E14DDA4D1D97258426E2A7798A9EB85A /* Headers */,
-				B112ACBF04D6932510AE3005C5EE54EB /* Sources */,
-				1C0CD577A65C07578DA37CD719C7B095 /* Frameworks */,
-				CCDB2FCF31448CD00546DE1E70EF861F /* Resources */,
+				502902C965AA98BC6AA7290087E9B0DA /* Headers */,
+				1E38C5298F7DA89800783AD097E578BC /* Sources */,
+				8D7A37231C49D760F8F9F1E48E3A3091 /* Frameworks */,
+				69ED3158D74E786D3507B7AF9394C574 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -445,7 +460,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CCDB2FCF31448CD00546DE1E70EF861F /* Resources */ = {
+		69ED3158D74E786D3507B7AF9394C574 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -485,26 +500,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B112ACBF04D6932510AE3005C5EE54EB /* Sources */ = {
+		1E38C5298F7DA89800783AD097E578BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				829AA95CC9C2A61BE7DCCB2FC980D3F2 /* NFGuardDog-dummy.m in Sources */,
-				211287EE8B819FC80D9D12EC52CDDC77 /* NFGuardDog.m in Sources */,
-				BFB3638C8F504F694B000CB1E4901E35 /* NFWeakObjectProxy.m in Sources */,
-				901BBAE9B5C2A49397E0BCCDB2C72391 /* NSArray+NFGuardDog.m in Sources */,
-				F728BF6B8CBC194B2D1A9583426681D7 /* NSAttributedString+NFGuardDog.m in Sources */,
-				2F68B01675B3E910831952337B8FB5C2 /* NSDictionary+NFGuardDog.m in Sources */,
-				8125FF06359EA9315675ABED0CD56AF4 /* NSMutableArray+NFGuardDog.m in Sources */,
-				3933E4E9AB20960FE1AD1C1425A1E9D4 /* NSMutableAttributedString+NFGuardDog.m in Sources */,
-				5CA59E0D7ED637C6706575347C97C748 /* NSMutableDictionary+NFGuardDog.m in Sources */,
-				55E785A1A65F1A06BF86F0A27006CAB2 /* NSMutableString+NFGuardDog.m in Sources */,
-				DA2D129EC1265F19397950F33AD94DD9 /* NSObject+NFGuardDogKVC.m in Sources */,
-				41B300D89D73F49EBFA5D5DF45645320 /* NSObject+NFGuardDogKVO.m in Sources */,
-				B97E549922F96128D2D21D8ECE3D56EC /* NSObject+NFGuardDogUnrecognizedSel.m in Sources */,
-				960C9EA4936B366DCB3AD7F268ED2047 /* NSObject+NFMethodSwizzling.m in Sources */,
-				FFEE7FC2FF4FD80BC049904B8EFA9E19 /* NSString+NFGuadDog.m in Sources */,
-				B1E0A2D2395DBDF123659CC952E63200 /* NSTimer+NFGuardDog.m in Sources */,
+				37BBB9EAC734B11020BBE9B3E4E4EFCF /* NFAvoidCrash.m in Sources */,
+				B05290C190D232930F11E75F1B85BFB0 /* NFGuardDog-dummy.m in Sources */,
+				428C9F162379D6C71AC7267476AF4A58 /* NFGuardDog.m in Sources */,
+				22E38C252A7DB4602A082BC634CD7DF5 /* NFWeakObjectProxy.m in Sources */,
+				9F7291B447726605F4C89E6830AA543C /* NSArray+NFGuardDog.m in Sources */,
+				2395DD5FD97DE2B1D65065F953DD8122 /* NSAttributedString+NFGuardDog.m in Sources */,
+				9188CC74D90114559C6CB6CE3541CAF9 /* NSDictionary+NFGuardDog.m in Sources */,
+				50CC09511BF0AC6AEBE20A09C2C424D4 /* NSMutableArray+NFGuardDog.m in Sources */,
+				8C1757022258F29145EA05289FD1D569 /* NSMutableAttributedString+NFGuardDog.m in Sources */,
+				C9F3B530F430D2C592288B2A4DD09CB2 /* NSMutableDictionary+NFGuardDog.m in Sources */,
+				6025780EB36464CC25DCD3E105867ABB /* NSMutableString+NFGuardDog.m in Sources */,
+				B3BE3D1FA01246B050A6B1105788D73A /* NSObject+NFGuardDogKVC.m in Sources */,
+				5BE0B69DC95914406AED0D85262DC39C /* NSObject+NFGuardDogKVO.m in Sources */,
+				7F1D67694DFD8AD9CF937AAC87AF6F1E /* NSObject+NFGuardDogUnrecognizedSel.m in Sources */,
+				10D67944B4BBC2D7E27F32A364C8B215 /* NSObject+NFMethodSwizzling.m in Sources */,
+				F05AE3EAD06AF6C45E0EC73646D27424 /* NSString+NFGuadDog.m in Sources */,
+				55248DFC14FDB3D4B313AEB4DFC6C5CB /* NSTimer+NFGuardDog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,9 +542,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		33702C9C08E0694C434FEF7E09F62DA8 /* Release */ = {
+		129473F7B1E5F335577E4C59FD14B94A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C31DF2DCDA3A2E91BA13B53AC8240123 /* NFGuardDog.release.xcconfig */;
+			baseConfigurationReference = 279A233B8978C0EBCAD922402AF94983 /* NFGuardDog.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -782,9 +798,9 @@
 			};
 			name = Debug;
 		};
-		A0F992D97D19F1FD9CDFF18A38C67491 /* Debug */ = {
+		A50EF7262E9E0E8E18F0C26069B0F487 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7AA712A0CB637A12AF0CAB98038ECBD /* NFGuardDog.debug.xcconfig */;
+			baseConfigurationReference = ABF5259B8DB12357903AC34F4E83D78E /* NFGuardDog.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -850,6 +866,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		15169FE5CB967C088C7E9D4DF8DDCA91 /* Build configuration list for PBXNativeTarget "NFGuardDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50EF7262E9E0E8E18F0C26069B0F487 /* Debug */,
+				129473F7B1E5F335577E4C59FD14B94A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -873,15 +898,6 @@
 			buildConfigurations = (
 				5F5A48250B7746466A570FF05BD1ED48 /* Debug */,
 				C2CDB16944B683D402C87FA26F28297F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ED145A941418A1FD2C1F57A1BE4DE3B3 /* Build configuration list for PBXNativeTarget "NFGuardDog" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A0F992D97D19F1FD9CDFF18A38C67491 /* Debug */,
-				33702C9C08E0694C434FEF7E09F62DA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

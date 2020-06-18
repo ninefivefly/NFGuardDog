@@ -10,8 +10,9 @@
 #endif
 #endif
 
-#import "NFCommonDefine.h"
 #import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
+#import "NFCommonDefine.h"
 #import "NFWeakObjectProxy.h"
 #import "NSArray+NFGuardDog.h"
 #import "NSAttributedString+NFGuardDog.h"

@@ -13,7 +13,7 @@
 
 @implementation NSArray (NFGuardDog)
 
-+ (void)load{
++ (void)nf_swizzleNSArray{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self nf_SwizzlingClassMethod:@selector(arrayWithObjects:count:) withMethod:@selector(nf_avoid_crash_arrayWithObjects:count:)];

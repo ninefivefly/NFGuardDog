@@ -24,6 +24,10 @@
 }
 
 - (void)nf_avoid_crash_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context{
+    if (!keyPath) {
+        return;
+    }
+    
     NFCatchExceptionWithIgonore([self nf_avoid_crash_addObserver:observer forKeyPath:keyPath options:options context:context];)
 }
 

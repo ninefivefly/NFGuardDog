@@ -41,6 +41,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString* vcClsStr = self.mTableDatas[indexPath.row].lastObject;
     UIViewController* vc = [[NSClassFromString(vcClsStr) alloc] init];
+    vc.title = self.mTableDatas[indexPath.row].firstObject;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

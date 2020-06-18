@@ -1,21 +1,19 @@
 //
-//  NFGuardDog.m
+//  NFAvoidCrash.m
 //  NFGuardDog
 //
 //  Created by JIANG PENGH CHENG on 2020/6/9.
 //  Copyright © 2020 JIANG PENG CHENG. All rights reserved.
-//
 
-#import "NFGuardDog.h"
-#import "NFCommonDefine.h"
+#import "NFAvoidCrash.h"
 
-@implementation NFGuardDog
+@implementation NFAvoidCrash
 
-+ (instancetype)happyDog{
-    static NFGuardDog* instance = nil;
++ (instancetype)shareInstance{
+    static NFAvoidCrash* instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[NFGuardDog alloc] init];
+        instance = [[NFAvoidCrash alloc] init];
     });
     return instance;
 }
@@ -108,6 +106,5 @@
     
     return mainCallStackSymbolMsg;
 }
-
 
 @end

@@ -149,8 +149,8 @@
 		214CDFFF249B436E000EB06B /* UnrecognizedSelector */ = {
 			isa = PBXGroup;
 			children = (
-				214CE000249B436F000EB06B /* NFUnrecogniseSelViewController.m */,
 				214CE001249B436F000EB06B /* NFUnrecogniseSelViewController.h */,
+				214CE000249B436F000EB06B /* NFUnrecogniseSelViewController.m */,
 			);
 			path = UnrecognizedSelector;
 			sourceTree = "<group>";

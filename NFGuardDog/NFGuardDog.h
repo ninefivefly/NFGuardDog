@@ -2,7 +2,7 @@
 //  NFGuardDog.h
 //  NFGuardDog
 //
-//  Created by JIANG PENGH CHENG on 2020/6/9.
+//  Created by JIANG PENGH CHENG on 2020/6/11.
 //  Copyright © 2020 JIANG PENG CHENG. All rights reserved.
 //
 
@@ -12,9 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NFGuardDog : NSObject
 
-+ (instancetype)happyDog;
 
-+ (void)notiErrorWithException:(NSException *)exception defaultToDo:(NSString *)dto;
 
 @end
 
