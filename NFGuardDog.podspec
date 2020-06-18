@@ -31,49 +31,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'NFGuardDog/NFGuardDog.{h,m}'
-  # s.default_subspec = 'All'
-  # s.subspec 'All' do |spec|
-    # spec.dependency 'NFGuardDog/Crash'
-    # spec.dependency 'NFGuardDog/Swizzle'
-    # spec.dependency 'NFGuardDog/UnrecognisedSelecter'
-    # spec.dependency 'NFGuardDog/Container'
-    # spec.dependency 'NFGuardDog/KVO'
-    # spec.dependency 'NFGuardDog/KVC'
-    # spec.dependency 'NFGuardDog/Timer'
-    # spec.dependency 'NFGuardDog/String'
-  # end
-
+ 
   s.subspec 'Crash' do |spec|
     spec.source_files  = "NFGuardDog/Crash/*.{h,m}"
   end
-
-  # s.subspec 'Swizzle' do |spec|
-  #   spec.source_files  = "NFGuardDog/Crash/Swizzle/*.{h,m}"
-  # end
-
-  # s.subspec 'UnrecognisedSelecter' do |spec|
-  #   spec.source_files  = "NFGuardDog/Crash/UnrecognisedSelecter/*.{h,m}"
-  # end
-
-  # s.subspec 'Container' do |spec|
-  #   spec.source_files  = "NFGuardDog/Crash/Container/*.{h,m}"
-  # end
-  
-  # s.subspec 'KVO' do |spec|
-  #   spec.source_files  = "NFGuardDog/Crash/KVO/*.{h,m}"
-  # end
-  
-  # s.subspec 'KVC' do |spec|
-  #   spec.source_files  = "NFGuardDog/Crash/KVC/*.{h,m}"
-  # end
-  
-  # s.subspec 'Timer' do |spec|
-  #   spec.source_files  = "NFGuardDog/Crash/Timer/*.{h,m}"
-  # end
-
-  # s.subspec 'String' do |spec|
-  #   spec.source_files  = "NFGuardDog/Crash/String/*.{h,m}"
-  # end
 
   
   # s.resource_bundles = {
