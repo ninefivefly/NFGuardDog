@@ -9,12 +9,21 @@
 #import "NFAppDelegate.h"
 #import "NFGuardDog.h"
 
+@interface NFAppDelegate()<NFAvoidCrashDelegate>
+
+@end
+
 @implementation NFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [NFGuardDog startCatchException:NFCrashExceptionTypeKVO];
+    //1. 启动所有避免crash组件
+    [NFGuardDog startAvoidAllCrashWithdelegate:self];
+    
+    //2. 启动部分避免crash组件
+    //NFAvoidCrashType type = NFAvoidCrashTypeKVC | NFAvoidCrashTypeKVO;
+    //[NFGuardDog startAvoidCrash:type delegate:self];
 
     return YES;
 }
@@ -44,6 +53,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)nf_handleAvoidCrashException:(NFCrashException *)exception{
+    NSLog(@"🐞🐞🐞：you have a crash need to process，see upward⬆️");
+    
+    //To do: 你可以在这儿上传捕获的异常😎😎😎
 }
 
 @end

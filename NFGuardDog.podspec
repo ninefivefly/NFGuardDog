@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'NFGuardDog'
   s.version          = '1.0.0'
-  s.summary          = 'APP的看门狗，主要功能有crash防护，crash收集，日志收集，FPS监控，流量监控'
+  s.summary          = 'APP的看门狗，基于runtime的Swizzle Method的crash防护框架，能实时捕获导致app崩溃的破坏因子并自动修复'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,10 +18,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-                        APP的看门狗，主要功能有crash防护，crash收集，日志收集，FPS监控，流量监控
+                        APP的看门狗，基于runtime的Swizzle Method的crash防护框架，能实时捕获导致app崩溃的破坏因子并自动修复；crash收集，方便异常上报；日志收集；FPS监控；流量监控。
                        DESC
 
-  s.homepage         = 'https://github.com/JIANG PENGH CHENG/NFGuardDog'
+  s.homepage         = 'https://github.com/ninefivefly/NFGuardDog.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'JIANG PENGH CHENG' => 'ninefivefly@foxmail.com' }

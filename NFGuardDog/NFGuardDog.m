@@ -7,17 +7,43 @@
 //
 
 #import "NFGuardDog.h"
+#import "NFAvoidCrash.h"
 
 @implementation NFGuardDog
 
 //
-+ (void)startCatchException:(NFCrashExceptionType)type{
-    [[NFAvoidCrash shareInstance] startCatchException:type];
++ (void)startAvoidAllCrash{
+    [self startAvoidCrashWithType:NFAvoidCrashTypeAll];
 }
 
 //
-+ (void)stopCatchException{
-    [[NFAvoidCrash shareInstance] stopCatchException];
++ (void)startAvoidCrashWithType:(NFAvoidCrashType)type{
+    [[NFAvoidCrash shareInstance] startAvoidCrash:type delegate:nil];
+}
+
+//
++ (void)startAvoidAllCrashWithdelegate:(id<NFAvoidCrashDelegate>)delegate{
+    [[NFAvoidCrash shareInstance] startAvoidCrash:NFAvoidCrashTypeAll delegate:delegate];
+}
+
+//
++ (void)startAvoidAllCrashWithhandleException:(void (^)(NFCrashException *exception))handle {
+    [[NFAvoidCrash shareInstance] startAvoidCrash:NFAvoidCrashTypeAll handleException:handle];
+}
+
+//
++ (void)startAvoidCrash:(NFAvoidCrashType)type delegate:(id<NFAvoidCrashDelegate>)delegate{
+    [[NFAvoidCrash shareInstance] startAvoidCrash:type delegate:delegate];
+}
+
+//
++ (void)startAvoidCrash:(NFAvoidCrashType)type handleException:(void (^)(NFCrashException *exception))handle {
+    [[NFAvoidCrash shareInstance] startAvoidCrash:type handleException:handle];
+}
+
+//
++ (void)stopAvoidCrash{
+    [[NFAvoidCrash shareInstance] stopAvoidCrash];
 }
 
 @end

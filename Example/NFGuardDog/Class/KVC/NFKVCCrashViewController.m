@@ -20,17 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self testKVCCrash1];
-    [self testKVCCrash2];
-    [self testKVCCrash3];
+//    [self testKVCCrash1];
+//    [self testKVCCrash2];
+//    [self testKVCCrash3];
     [self testKVCCrash4];
-    [self testKVCCrash5];
+//    [self testKVCCrash5];
 }
 
 // 1. key 不是对象的属性，造成崩溃
 - (void)testKVCCrash1 {
     NFCrashObject *objc = [[NFCrashObject alloc] init];
     [objc setValue:@"value" forKey:@"address"];
+    [objc valueForKey:@"address"];
 }
 
 // 2. keyPath 不正确，造成崩溃

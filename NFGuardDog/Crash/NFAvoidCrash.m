@@ -37,18 +37,32 @@
     return instance;
 }
 
-- (void)startCatchException:(NFCrashExceptionType)type{
-    self.catchExceptionType = type;
+//
+- (void)startAvoidCrash:(NFAvoidCrashType)type delegate:(id<NFAvoidCrashDelegate>)delegate{
+    self.avoidCrashType = type;
     self.isCatchExceptionOn = YES;
+    self.delegate = delegate;
 }
 
-- (void)stopCatchException{
+//
+- (void)startAvoidCrash:(NFAvoidCrashType)type handleException:(void (^)(NFCrashException *exception))handle{
+    self.avoidCrashType = type;
+    self.isCatchExceptionOn = YES;
+    self.handleCrashException = handle;
+}
+
+- (void)stopAvoidCrash{
     self.isCatchExceptionOn = NO;
 }
 
 - (void)notiErrorWithException:(NSException *)exception defaultToDo:(nonnull NSString *)dto {
     NFCrashException* exc = [NFCrashException exceptionWithNSException:exception dto:dto];
     [exc printBrief];
+    
+    //
+    if ([self.delegate respondsToSelector:@selector(nf_handleAvoidCrashException:)]) {
+        [self.delegate nf_handleAvoidCrashException:exc];
+    }
     
     //
     if (self.handleCrashException) {
@@ -62,30 +76,30 @@
     }
     _isCatchExceptionOn = isCatchExceptionOn;
     
-    if (self.catchExceptionType & NFCrashExceptionTypeContainer) {
+    if (self.avoidCrashType & NFAvoidCrashTypeContainer) {
         [NSArray nf_swizzleMethods];
         [NSMutableArray nf_swizzleMethods];
         [NSDictionary nf_swizzleMethods];
         [NSMutableDictionary nf_swizzleMethods];
     }
     
-    if (self.catchExceptionType & NFCrashExceptionTypeUnrecognizedSelector) {
+    if (self.avoidCrashType & NFAvoidCrashTypeUnrecognizedSelector) {
         [NSObject nf_swizzleMethods];
     }
     
-    if (self.catchExceptionType & NFCrashExceptionTypeKVO) {
+    if (self.avoidCrashType & NFAvoidCrashTypeKVO) {
         [NSObject nf_swizzleMethodsKVO];
     }
     
-    if (self.catchExceptionType & NFCrashExceptionTypeKVC) {
+    if (self.avoidCrashType & NFAvoidCrashTypeKVC) {
         [NSObject nf_swizzleMethodsKVC];
     }
     
-    if (self.catchExceptionType & NFCrashExceptionTypeTimer) {
+    if (self.avoidCrashType & NFAvoidCrashTypeTimer) {
         [NSTimer nf_swizzleMethods];
     }
     
-    if (self.catchExceptionType & NFCrashExceptionTypeString) {
+    if (self.avoidCrashType & NFAvoidCrashTypeString) {
         [NSString nf_swizzleMethods];
         [NSMutableString nf_swizzleMethods];
         [NSAttributedString nf_swizzleMethods];

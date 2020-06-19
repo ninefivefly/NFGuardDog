@@ -1,9 +1,9 @@
 {
   "name": "NFGuardDog",
   "version": "1.0.0",
-  "summary": "APP的看门狗，主要功能有crash防护，crash收集，日志收集，FPS监控，流量监控",
-  "description": "APP的看门狗，主要功能有crash防护，crash收集，日志收集，FPS监控，流量监控",
-  "homepage": "https://github.com/JIANG PENGH CHENG/NFGuardDog",
+  "summary": "APP的看门狗，基于runtime的Swizzle Method的crash防护框架，能实时捕获导致app崩溃的破坏因子并自动修复",
+  "description": "APP的看门狗，基于runtime的Swizzle Method的crash防护框架，能实时捕获导致app崩溃的破坏因子并自动修复；crash收集，方便异常上报；日志收集；FPS监控；流量监控。",
+  "homepage": "https://github.com/ninefivefly/NFGuardDog.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"

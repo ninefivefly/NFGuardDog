@@ -6,26 +6,17 @@
 //  Copyright © 2020 JIANG PENG CHENG. All rights reserved.
 
 #import <Foundation/Foundation.h>
-#import "NFCrashException.h"
+#import "NFGuardDog.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, NFCrashExceptionType) {
-    NFCrashExceptionTypeNone = 0,
-    NFCrashExceptionTypeUnrecognizedSelector        = 1 << 1,
-    NFCrashExceptionTypeKVO                         = 1 << 2,
-    NFCrashExceptionTypeKVC                         = 1 << 3,
-    NFCrashExceptionTypeTimer                       = 1 << 4,
-    NFCrashExceptionTypeContainer                   = 1 << 5,
-    NFCrashExceptionTypeString                      = 1 << 6,
-    NFCrashExceptionTypeAll                         = -1
-};
-
 @interface NFAvoidCrash : NSObject
 
+//
+@property(nonatomic)NFAvoidCrashType avoidCrashType;
 
 //
-@property(nonatomic)NFCrashExceptionType catchExceptionType;
+@property(nonatomic, weak)id<NFAvoidCrashDelegate> delegate;
 
 //
 @property(nonatomic, copy, nullable) void (^handleCrashException)(NFCrashException *exception);
@@ -37,10 +28,13 @@ typedef NS_ENUM(NSInteger, NFCrashExceptionType) {
 - (void)notiErrorWithException:(NSException *)exception defaultToDo:(nonnull NSString *)dto;
 
 //
-- (void)startCatchException:(NFCrashExceptionType)type;
+- (void)startAvoidCrash:(NFAvoidCrashType)type delegate:(nullable id<NFAvoidCrashDelegate>)delegate;
 
 //
-- (void)stopCatchException;
+- (void)startAvoidCrash:(NFAvoidCrashType)type handleException:(nullable void (^)(NFCrashException *exception))handle;
+
+//
+- (void)stopAvoidCrash;
 
 @end
 
