@@ -21,6 +21,7 @@
     [self testUnrecogniseSelector2];
     [self testUnrecogniseSelector3];
     [self testUnrecogniseSelector4];
+    [self testUnrecogniseSelector5];
 }
 
 // 找不动对象方法
@@ -52,6 +53,11 @@
     id obj = @"crash string";
     [obj objectForKey:@"name"];
     [obj setObject:@"" forKey:@"age"];
+}
+
+- (void)testUnrecogniseSelector5{
+    id nul = [NSNull null];
+    [nul performSelector:@selector(testUnrecogniseSelector4)];
 }
 
 @end

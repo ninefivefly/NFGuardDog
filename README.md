@@ -27,12 +27,13 @@ APP的看门狗，基于runtime的Swizzle Method的crash防护框架，能实时
 - 野指针
 
 ## 功能
-- [x] Unrecognized Selector crash
-- [x] Container crash 
-- [x] KVO crash
-- [x] KVC crash
-- [x] NSString类族 Crash
-- [x] NSTimer 
+- ✅  Unrecognized Selector crash
+- ✅  Container crash 
+- ✅  KVO crash
+- ✅  KVC crash
+- ✅  NSString类族 Crash
+- ✅  NSTimer 
+- ✅  NSNull 
 
 
 ## 使用方法
