@@ -68,6 +68,13 @@ it, simply add the following line to your Podfile:
 pod 'NFGuardDog'
 ```
 
+## 开发计划
+- ✅  AvoidCrash
+- ❎  日志收集
+- ❎  FPS监控
+- ❎  crash收集
+- ❎  流量监控
+
 ## Author
 
 JIANG PENGH CHENG, ninefivefly@foxmail.com
