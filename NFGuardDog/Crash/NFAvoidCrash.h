@@ -36,6 +36,12 @@ typedef NS_ENUM(NSInteger, NFCrashExceptionType) {
 //
 - (void)notiErrorWithException:(NSException *)exception defaultToDo:(nonnull NSString *)dto;
 
+//
+- (void)startCatchException:(NFCrashExceptionType)type;
+
+//
+- (void)stopCatchException;
+
 @end
 
 NS_ASSUME_NONNULL_END

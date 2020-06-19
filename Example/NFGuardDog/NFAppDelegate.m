@@ -7,12 +7,15 @@
 //
 
 #import "NFAppDelegate.h"
+#import "NFGuardDog.h"
 
 @implementation NFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [NFGuardDog startCatchException:NFCrashExceptionTypeKVO];
+
     return YES;
 }
 

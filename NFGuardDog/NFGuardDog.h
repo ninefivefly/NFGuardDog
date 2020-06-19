@@ -7,12 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NFAvoidCrash.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NFGuardDog : NSObject
 
+//
++ (void)startCatchException:(NFCrashExceptionType)type;
 
+//
++ (void)stopCatchException;
 
 @end
 

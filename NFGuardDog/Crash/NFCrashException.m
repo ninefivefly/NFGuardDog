@@ -25,7 +25,7 @@
     self = [super init];
     if (self) {
         _defaultToDo = dto;
-        _exception = exception;
+        self.exception = exception;
         
     }
     return self;
@@ -61,13 +61,13 @@
 
 - (void)printBrief{
 #ifdef DEBUG
-    NSLog(@"================================NFAVoidCrash Start==================================");
+    NSLog(@"============NFAVoidCrash Start===============");
     NSLog(@"NFAVoidCrash Name:%@", self.name);
     NSLog(@"NFAVoidCrash Reason:%@", self.reason);
     NSLog(@"NFAVoidCrash Place:%@", self.place);
     NSLog(@"NFAVoidCrash Deafult to do:%@", self.defaultToDo);
     NSLog(@"NFAVoidCrash Call Stack Symbols:\n%@", self.callStackSymbols);
-    NSLog(@"================================NFAVoidCrash End====================================");
+    NSLog(@"============NFAVoidCrash End=================");
 #endif
 }
 

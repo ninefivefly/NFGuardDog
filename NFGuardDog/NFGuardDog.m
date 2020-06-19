@@ -10,8 +10,14 @@
 
 @implementation NFGuardDog
 
-+ (void)start{
-    
+//
++ (void)startCatchException:(NFCrashExceptionType)type{
+    [[NFAvoidCrash shareInstance] startCatchException:type];
+}
+
+//
++ (void)stopCatchException{
+    [[NFAvoidCrash shareInstance] stopCatchException];
 }
 
 @end
