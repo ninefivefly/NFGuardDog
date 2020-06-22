@@ -6,7 +6,7 @@
 //  Copyright © 2020 JIANG PENG CHENG. All rights reserved.
 
 #import <Foundation/Foundation.h>
-#import "NFGuardDog.h"
+#import "NFCrashException.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

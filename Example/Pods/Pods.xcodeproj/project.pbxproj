@@ -96,8 +96,8 @@
 		57964128725109240BDF107FC27F4C51 /* NFGuardDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NFGuardDog.release.xcconfig; sourceTree = "<group>"; };
 		5CD58F8A678723E5242805CF0874C84A /* NSTimer+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+NFGuardDog.m"; path = "NFGuardDog/Crash/NSTimer+NFGuardDog.m"; sourceTree = "<group>"; };
 		67A4288E64CADF43517F95B18362B830 /* NFCommonDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NFCommonDefine.h; path = NFGuardDog/Crash/NFCommonDefine.h; sourceTree = "<group>"; };
-		695B06717639E3FE8DDE5DC205260D30 /* NFGuardDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NFGuardDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AA2E73E14FD5486B27DF8E6856D0B8A /* Pods_NFGuardDog_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFGuardDog_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		695B06717639E3FE8DDE5DC205260D30 /* NFGuardDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NFGuardDog.framework; path = NFGuardDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AA2E73E14FD5486B27DF8E6856D0B8A /* Pods_NFGuardDog_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NFGuardDog_Tests.framework; path = "Pods-NFGuardDog_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75289F73C2FCEB91B1C484C6A6704C52 /* NFGuardDog-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NFGuardDog-Info.plist"; sourceTree = "<group>"; };
 		76B3904FA6EDA53F65D57AF015AD40F4 /* NFWeakObjectProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NFWeakObjectProxy.m; path = NFGuardDog/Crash/NFWeakObjectProxy.m; sourceTree = "<group>"; };
 		7D9E2AB8AA4E11DFE603516183912BB9 /* NSArray+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+NFGuardDog.h"; path = "NFGuardDog/Crash/NSArray+NFGuardDog.h"; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 		90E7F213B8E257402F179649D60B53CB /* NSMutableString+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableString+NFGuardDog.m"; path = "NFGuardDog/Crash/NSMutableString+NFGuardDog.m"; sourceTree = "<group>"; };
 		926D8ADA44288726587C274D55C9AA31 /* NSMutableDictionary+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+NFGuardDog.m"; path = "NFGuardDog/Crash/NSMutableDictionary+NFGuardDog.m"; sourceTree = "<group>"; };
 		962487ECA70B2C381DE35A202FC25F7D /* NSArray+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+NFGuardDog.m"; path = "NFGuardDog/Crash/NSArray+NFGuardDog.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F934E894694F3AFDC2B063570618300 /* Pods_NFGuardDog_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFGuardDog_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F934E894694F3AFDC2B063570618300 /* Pods_NFGuardDog_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NFGuardDog_Example.framework; path = "Pods-NFGuardDog_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0601870F8E3141879A100ABD76A6FBC /* NSAttributedString+NFGuardDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+NFGuardDog.m"; path = "NFGuardDog/Crash/NSAttributedString+NFGuardDog.m"; sourceTree = "<group>"; };
 		A1E651F8069E99925ED67DFF4891CE18 /* NSObject+NFGuardDogUnrecognizedSel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+NFGuardDogUnrecognizedSel.h"; path = "NFGuardDog/Crash/NSObject+NFGuardDogUnrecognizedSel.h"; sourceTree = "<group>"; };
 		A81BBF37A6B7EC5452D2CFD59B50349F /* Pods-NFGuardDog_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NFGuardDog_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -126,12 +126,12 @@
 		C54BE7E1DF0341F2602C3BC199CEBF5E /* NSObject+NFGuardDogKVO.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NFGuardDogKVO.m"; path = "NFGuardDog/Crash/NSObject+NFGuardDogKVO.m"; sourceTree = "<group>"; };
 		C6F385EE3D2037DD3A253E32AC5F54C3 /* Pods-NFGuardDog_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFGuardDog_Tests-dummy.m"; sourceTree = "<group>"; };
 		D280117F41D0CE0BC2D62CC5A384AEAC /* NSMutableArray+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+NFGuardDog.h"; path = "NFGuardDog/Crash/NSMutableArray+NFGuardDog.h"; sourceTree = "<group>"; };
-		D600A2D5437D1AC7CB90AD2DFD97FEAB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D600A2D5437D1AC7CB90AD2DFD97FEAB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		D63F28160894794105228F7A9557721E /* NSObject+NFMethodSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+NFMethodSwizzling.h"; path = "NFGuardDog/Crash/NSObject+NFMethodSwizzling.h"; sourceTree = "<group>"; };
 		D698381E156B9C8998EEC277D7FA2262 /* NSMutableAttributedString+NFGuardDog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+NFGuardDog.h"; path = "NFGuardDog/Crash/NSMutableAttributedString+NFGuardDog.h"; sourceTree = "<group>"; };
 		D9C0D44406F668BD86A4DFC604396C97 /* NSString+NFGuadDog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+NFGuadDog.m"; path = "NFGuardDog/Crash/NSString+NFGuadDog.m"; sourceTree = "<group>"; };
-		E01C547C7E81B91A23AC1860E1D20D4A /* NFGuardDog.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = NFGuardDog.podspec; sourceTree = "<group>"; tabWidth = 2; };
-		E7CF2E10A4F522B1328A46AE500211E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E01C547C7E81B91A23AC1860E1D20D4A /* NFGuardDog.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = NFGuardDog.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E7CF2E10A4F522B1328A46AE500211E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		EAD4E2F7BCA8482FA4066345A92CBCED /* Pods-NFGuardDog_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NFGuardDog_Tests-umbrella.h"; sourceTree = "<group>"; };
 		EAED616902221B88917D9E4283CFC30F /* NSObject+NFGuardDogUnrecognizedSel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NFGuardDogUnrecognizedSel.m"; path = "NFGuardDog/Crash/NSObject+NFGuardDogUnrecognizedSel.m"; sourceTree = "<group>"; };
 		EAF5269BD068B4A34102E87EFE796359 /* Pods-NFGuardDog_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFGuardDog_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -669,7 +669,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

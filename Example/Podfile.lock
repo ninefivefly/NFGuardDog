@@ -1,7 +1,7 @@
 PODS:
-  - NFGuardDog (1.0.0):
-    - NFGuardDog/Crash (= 1.0.0)
-  - NFGuardDog/Crash (1.0.0)
+  - NFGuardDog (1.0.1):
+    - NFGuardDog/Crash (= 1.0.1)
+  - NFGuardDog/Crash (1.0.1)
 
 DEPENDENCIES:
   - NFGuardDog (from `../`)
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NFGuardDog: f4c872e9df45fda8cfc59491a56879969ae1ed75
+  NFGuardDog: 9089eec6993de20c5a6e401803123fbae0fb3be0
 
 PODFILE CHECKSUM: 2d49257c8088e073b179fdb8e99f02dcfc9d67f3
 
