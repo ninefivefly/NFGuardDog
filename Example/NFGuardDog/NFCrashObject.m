@@ -2,7 +2,7 @@
 //  NFCrashObject.m
 //  NFGuardDog_Example
 //
-//  Created by bb on 2020/6/18.
+//  Created by JIANG PENGH CHENG on 2020/6/18.
 //  Copyright © 2020 JIANG PENGH CHENG. All rights reserved.
 //
 

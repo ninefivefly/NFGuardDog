@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NFCrashException.h"
+#import "NFAVoidCrashDefine.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

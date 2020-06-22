@@ -12,6 +12,7 @@
 
 #import "NFGuardDog.h"
 #import "NFAvoidCrash.h"
+#import "NFAVoidCrashDefine.h"
 #import "NFCommonDefine.h"
 #import "NFCrashException.h"
 #import "NFWeakObjectProxy.h"

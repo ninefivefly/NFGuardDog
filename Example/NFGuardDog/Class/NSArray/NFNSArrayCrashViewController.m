@@ -89,7 +89,8 @@
     obj = mArr1[100];
     
     //setObject:atIndexedSubscript:
-    [mArr1 setObject:nil atIndexedSubscript:100];
+    id nilObj = nil;
+    [mArr1 setObject:nilObj atIndexedSubscript:100];
     [mArr1 setObject:@"J.P.C.1" atIndexedSubscript:1];
     [mArr1 setObject:@"J.P.C.1" atIndexedSubscript:0];
         
@@ -100,7 +101,7 @@
     [mArr1 insertObject:@"J.P.C.2" atIndex:2];
     [mArr1 insertObject:@"J.P.C.2" atIndex:1];
     [mArr1 insertObject:@"J.P.C.3" atIndex:0];
-    [mArr1 insertObject:nil atIndex:0];
+    [mArr1 insertObject:nilObj atIndex:0];
     
     //getObjects:range:
     id  _Nonnull __unsafe_unretained newObjects[2];
