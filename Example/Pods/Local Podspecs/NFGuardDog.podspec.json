@@ -18,7 +18,7 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "NFGuardDog/NFGuardDog.{h,m}",
+  "source_files": "NFGuardDog/*.{h,m}",
   "subspecs": [
     {
       "name": "Crash",

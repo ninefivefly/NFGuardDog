@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'NFGuardDog/NFGuardDog.{h,m}'
+  s.source_files = 'NFGuardDog/*.{h,m}'
  
   s.subspec 'Crash' do |spec|
     spec.source_files  = "NFGuardDog/Crash/*.{h,m}"
