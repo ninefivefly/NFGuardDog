@@ -1,6 +1,5 @@
 # NFGuardDog
 
-[![CI Status](https://img.shields.io/travis/JIANG PENGH CHENG/NFGuardDog.svg?style=flat)](https://travis-ci.org/JIANG PENGH CHENG/NFGuardDog)
 [![Version](https://img.shields.io/cocoapods/v/NFGuardDog.svg?style=flat)](https://cocoapods.org/pods/NFGuardDog)
 [![License](https://img.shields.io/cocoapods/l/NFGuardDog.svg?style=flat)](https://cocoapods.org/pods/NFGuardDog)
 [![Platform](https://img.shields.io/cocoapods/p/NFGuardDog.svg?style=flat)](https://cocoapods.org/pods/NFGuardDog)
