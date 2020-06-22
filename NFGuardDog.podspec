@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NFGuardDog'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'APP的看门狗，基于runtime的Swizzle Method的crash防护框架，能实时捕获导致app崩溃的破坏因子并自动修复'
 
 # This description is used to generate tags and improve search results.
